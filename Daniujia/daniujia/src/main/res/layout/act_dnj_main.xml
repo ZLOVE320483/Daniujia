@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <LinearLayout
+        android:id="@+id/id_framework"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_divider"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/bottom_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_divider"
+        android:layout_above="@+id/ll_bottom"
+        android:contentDescription="@string/app_name"
+        android:src="@color/third_text_color" />
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/common_top_bar_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="2dp" >
+
+        <RadioButton
+            android:id="@+id/tab_home"
+            style="@style/main_bottom_tab"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:checked="false"
+            android:drawableTop="@drawable/ic_tab_home"
+            android:gravity="center"
+            android:paddingLeft="0dp"
+            android:text="@string/main_tab_home" />
+
+        <RadioButton
+            android:id="@+id/tab_requirement"
+            style="@style/main_bottom_tab"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:checked="false"
+            android:drawableTop="@drawable/ic_tab_ask_reward"
+            android:gravity="center"
+            android:paddingLeft="0dp"
+            android:visibility="visible"
+            android:text="需求" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <RadioButton
+                android:id="@+id/tab_conversation"
+                style="@style/main_bottom_tab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:drawableTop="@drawable/ic_tab_message"
+                android:gravity="center"
+                android:paddingLeft="0dp"
+                android:text="@string/message" />
+
+            <TextView
+                android:id="@+id/id_unread_count"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="right"
+                android:background="@drawable/bg_circle_textview"
+                android:gravity="center"
+                android:layout_marginRight="20dp"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+        </FrameLayout>
+
+
+        <RadioButton
+            android:id="@+id/tab_me"
+            style="@style/main_bottom_tab"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_tab_me"
+            android:gravity="center"
+            android:paddingLeft="0dp"
+            android:text="@string/account" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

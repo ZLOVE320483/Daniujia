@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_common_grey_border"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/shape_common_grey_border">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/service_type"
+                    android:textColor="@color/grey"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/grey_darker"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fee"
+                    android:textColor="@color/grey_darker"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/price_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/grey_darker"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/et_price"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/shape_rect_top_round_white_bg"
+                android:hint="@string/price"
+                android:inputType="number"
+                android:padding="5dp"
+                android:textColor="@color/grey_darkest"
+                android:textColorHint="@color/light_grey"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/id_divider_1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_divider"
+            android:layout_below="@+id/tv_dialog_content"
+            android:layout_marginTop="12dp"
+            android:contentDescription="@string/app_name"
+            android:src="@color/separate" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/selector_grey_dark"
+                android:padding="8dp"
+                android:text="@string/cancel"
+                android:textColor="@color/theme_blue" />
+
+            <ImageView
+                android:layout_width="@dimen/list_divider"
+                android:layout_height="32dp"
+                android:contentDescription="@string/app_name"
+                android:src="@color/separate" />
+
+            <Button
+                android:id="@+id/confirm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/selector_grey_dark"
+                android:padding="8dp"
+                android:text="@string/confirm"
+                android:textColor="@color/theme_blue" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

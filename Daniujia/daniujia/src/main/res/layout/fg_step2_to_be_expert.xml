@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_content_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_top_bar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:background="@color/common_line_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_alignParentLeft="true"
+                android:id="@+id/first_step"
+                android:layout_width="15dp"
+                android:src="@drawable/number1_h"
+                android:layout_height="15dp"
+                android:layout_marginLeft="19dp"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/noddle1_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="7dp"
+                android:layout_toRightOf="@+id/first_step"
+                android:src="@drawable/noddleblue"/>
+
+            <ImageView
+                android:id="@+id/step2"
+                android:layout_toRightOf="@+id/noddle1_2"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/number2_h"
+                android:layout_marginLeft="12dp"/>
+
+            <ImageView
+                android:id="@+id/noddle2_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="7dp"
+                android:layout_toLeftOf="@+id/step3"
+                android:src="@drawable/noddle" />
+
+            <ImageView
+                android:id="@+id/step3"
+                android:layout_centerHorizontal="true"
+                android:layout_width="15dp"
+                android:src="@drawable/number3"
+                android:layout_height="15dp"/>
+
+            <ImageView
+                android:id="@+id/noddle3_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="7dp"
+                android:layout_toRightOf="@+id/step3"
+                android:src="@drawable/noddle" />
+
+            <ImageView
+                android:id="@+id/step4"
+                android:layout_toRightOf="@+id/noddle3_4"
+                android:layout_width="15dp"
+                android:src="@drawable/number4"
+                android:layout_height="15dp"
+                android:layout_marginLeft="14dp"/>
+
+            <ImageView
+                android:id="@+id/noddle4_complete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="7dp"
+                android:layout_toLeftOf="@+id/complete"
+                android:src="@drawable/noddle" />
+
+            <ImageView
+                android:id="@+id/complete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="19dp"
+                android:src="@drawable/complete" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/update_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:text="资料完善"
+                android:textColor="@color/second_text_color"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/work_experience"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="36dp"
+                android:layout_toLeftOf="@+id/edu_bg_detail"
+                android:text="工作经历"
+                android:textColor="@color/common_green"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/edu_bg_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="教育背景"
+                android:textColor="#888888"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/service_set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_toRightOf="@id/edu_bg_detail"
+                android:text="服务设置"
+                android:textColor="#888888"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/complete_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:text="申请完成"
+                android:textColor="#888888"
+                android:textSize="10sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:background="@color/separate" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:text="工作经历(至少一条)"
+        android:textColor="@color/second_text_color"
+        android:textSize="12sp" />
+
+
+    <View
+        android:id="@+id/content_divide"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="@dimen/divider_height"
+        android:background="@color/separate" />
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="fill_parent"
+        android:divider="@null"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

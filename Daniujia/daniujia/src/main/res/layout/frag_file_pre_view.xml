@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zp="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_content_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_top_bar_chat" />
+
+    <include layout="@layout/common_line" />
+
+    <ImageView
+        android:id="@+id/preview_iv_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="87dp"
+        android:src="@drawable/unknown_big" />
+
+    <TextView
+        android:id="@+id/preview_tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/first_text_color"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/preview_tv_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/second_text_color"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/preview_tv_download"
+        android:layout_width="305dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_rect_blue"
+        android:gravity="center"
+        android:text="开始下载"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <RelativeLayout
+        android:id="@+id/preview_rl_download"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp">
+
+        <com.xiaojia.daniujia.ui.views.orderprogress.HorizontalProgressBar
+            android:id="@+id/preview_hp_download_rate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            zp:progress_reached_color="@color/blue_text"
+            zp:progress_text_visibility="invisible"
+            zp:progress_unreached_color="#cfd8dc" />
+
+        <ImageView
+            android:id="@+id/preview_iv_cancel"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/document_close" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

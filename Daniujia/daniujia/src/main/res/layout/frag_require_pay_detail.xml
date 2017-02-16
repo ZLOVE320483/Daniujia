@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/common_content_bg"
+              android:orientation="vertical">
+
+    <include layout="@layout/order_detail_top_bar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/rl_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/blue_text">
+
+                    <TextView
+                        android:id="@+id/require_prepay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="34dp"
+                        android:text="1000"
+                        android:textColor="@color/white"
+                        android:textSize="45sp"/>
+
+                    <TextView
+                        android:id="@+id/require_prepay_logo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/require_prepay"
+                        android:layout_marginBottom="2dp"
+                        android:layout_toLeftOf="@id/require_prepay"
+                        android:text="￥"
+                        android:textColor="@color/white"
+                        android:textSize="34sp"/>
+
+                    <TextView
+                        android:id="@+id/require_prepay_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/require_prepay"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center"
+                        android:text="预付款"
+                        android:textSize="14sp"
+                        android:textColor="@color/white"/>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="30dp"
+                        android:paddingLeft="10dp"
+                        android:layout_below="@id/require_prepay_title"
+                        android:gravity="center_vertical"
+                        android:text="订单名称：顾问费预付款"
+                        android:textColor="@color/second_text_color"
+                        android:background="@drawable/shape_dlg_white_rect_top_round"
+                        android:textSize="13sp"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/pay_detail_order_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_below="@id/rl_info"
+                    android:background="@drawable/shape_dlg_white_rect_bottom_round"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/tv_prepay"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1000"
+                                android:textColor="@color/first_text_color"
+                                android:textSize="18sp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@id/tv_prepay"
+                                android:layout_marginBottom="2dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@id/tv_prepay"
+                                android:text="元/位"
+                                android:textColor="@color/second_text_color"
+                                android:textSize="12sp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/tv_prepay"
+                                android:layout_marginTop="9dp"
+                                android:text="预付款单价"
+                                android:textColor="@color/second_text_color"
+                                android:textSize="12sp"/>
+
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="match_parent"
+                            android:background="@color/separate"/>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/adviser_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2"
+                                android:textColor="@color/first_text_color"
+                                android:textSize="18sp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@id/adviser_count"
+                                android:layout_marginBottom="2dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@id/adviser_count"
+                                android:text="位"
+                                android:textColor="@color/second_text_color"
+                                android:textSize="12sp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/adviser_count"
+                                android:layout_marginTop="9dp"
+                                android:text="顾问位数"
+                                android:textColor="@color/second_text_color"
+                                android:textSize="12sp"/>
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_common_grey_border"
+                    android:paddingBottom="14dp"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="14dp">
+
+                    <ImageView
+                        android:id="@+id/iv_balance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:src="@drawable/demand_pay_balance"/>
+
+                    <TextView
+                        android:id="@+id/tv_pay_balance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_balance"
+                        android:text="余额支付"
+                        android:textColor="@color/first_text_color"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_pay_balance"
+                        android:layout_marginTop="8dp"
+                        android:layout_toRightOf="@id/iv_balance"
+                        android:text="剩余10000元"
+                        android:textColor="@color/second_text_color"
+                        android:textSize="16sp"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="21dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="仍需支付"
+                        android:textColor="@color/second_text_color"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="[ 200元 ]"
+                        android:textColor="@color/first_text_color"
+                        android:textSize="14sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/shape_common_grey_border"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/pay_detail_we_chat_pay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="14dp">
+
+                        <ImageView
+                            android:id="@+id/iv_we_chat_pay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dp"
+                            android:src="@drawable/demand_pay_wechat"/>
+
+                        <TextView
+                            android:id="@+id/tv_we_chat_pay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/iv_we_chat_pay"
+                            android:text="微信支付"
+                            android:textColor="@color/first_text_color"
+                            android:textSize="16sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_we_chat_limit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_we_chat_pay"
+                            android:layout_marginTop="8dp"
+                            android:layout_toRightOf="@id/iv_we_chat_pay"
+                            android:text="每日限额3000元"
+                            android:textColor="@color/second_text_color"
+                            android:textSize="16sp"/>
+
+                        <ImageView
+                            android:id="@+id/pay_detail_we_chat_pay_select"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/selector_pay_way"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:layout_alignLeft="@id/tv_we_chat_limit"
+                            android:layout_below="@id/tv_we_chat_limit"
+                            android:layout_marginTop="14dp"
+                            android:background="@color/separate"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/pay_detail_ali_pay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="14dp">
+
+                        <ImageView
+                            android:id="@+id/iv_we_ali_pay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dp"
+                            android:src="@drawable/demand_pay_zhifubao"/>
+
+                        <TextView
+                            android:id="@+id/tv_we_ali_pay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/iv_we_ali_pay"
+                            android:text="支付宝支付"
+                            android:textColor="@color/first_text_color"
+                            android:textSize="16sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_we_ali_limit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_we_ali_pay"
+                            android:layout_marginTop="8dp"
+                            android:layout_toRightOf="@id/iv_we_ali_pay"
+                            android:text="每日限额依据支付宝限制"
+                            android:textColor="@color/second_text_color"
+                            android:textSize="16sp"/>
+
+                        <ImageView
+                            android:id="@+id/pay_detail_ali_pay_select"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/selector_pay_way"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:layout_alignLeft="@id/tv_we_ali_limit"
+                            android:layout_below="@id/tv_we_ali_limit"
+                            android:layout_marginTop="14dp"
+                            android:background="@color/separate"/>
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/pay_detail_transfer_pay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="14dp">
+
+                        <ImageView
+                            android:id="@+id/iv_we_transfer_pay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dp"
+                            android:src="@drawable/demand_pay_transfers"/>
+
+                        <TextView
+                            android:id="@+id/tv_we_transfer_pay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/iv_we_transfer_pay"
+                            android:text="转账支付"
+                            android:textColor="@color/first_text_color"
+                            android:textSize="16sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_we_transfer_limit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_we_transfer_pay"
+                            android:layout_marginTop="8dp"
+                            android:layout_toRightOf="@id/iv_we_transfer_pay"
+                            android:text="直接转账给大牛家企业账户"
+                            android:textColor="@color/second_text_color"
+                            android:textSize="16sp"/>
+
+                        <ImageView
+                            android:id="@+id/pay_detail_transfer_pay_select"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/selector_pay_way"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:layout_alignLeft="@id/tv_we_transfer_limit"
+                            android:layout_below="@id/tv_we_transfer_limit"
+                            android:layout_marginTop="14dp"
+                            android:background="@color/separate"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <CheckBox
+                    android:id="@+id/pay_detail_cb_invoice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="10dp"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/check_box_blue_bg"
+                    android:drawablePadding="8dp"
+                    android:text="我要开票"
+                    android:textColor="@color/second_text_color"
+                    android:textSize="13sp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/confirm"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/blue_text"
+        android:text="确认支付"
+        android:textColor="@color/white"
+        android:textSize="19sp"/>
+
+</LinearLayout>

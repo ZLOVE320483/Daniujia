@@ -1,0 +1,73 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.0.1"
+
+    defaultConfig {
+        applicationId "com.xiaojia.daniujia"
+        minSdkVersion 11
+        targetSdkVersion 21
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+    task nativeLibsToJar(type: Zip, description: "create a jar archive of the native libs"){
+        destinationDir file("$projectDir/libs")
+        baseName "Native_Libs2"
+        extension "jar"
+        from fileTree(dir: "libs", include: "**/*.so")
+        into "lib"
+    }
+
+    tasks.withType(JavaCompile) {
+        compileTask -> compileTask.dependsOn(nativeLibsToJar)
+    }
+
+    sourceSets.main {
+        jniLibs.srcDirs = ['libs']  // <-- Set your folder here!
+    }
+}
+
+dependencies {
+    compile project(':androidTpl')
+    compile 'com.android.support:support-v4:21.+'
+    compile files('libs/alipaysdk.jar')
+    compile files('libs/alipaysecsdk.jar')
+    compile files('libs/alipayutdid.jar')
+    compile files('libs/android-async-http-1.4.9.jar')
+    compile files('libs/fastjson-1.1.32.jar')
+    compile files('libs/happy-dns-0.2.4.jar')
+    compile files('libs/httpclient-4.4.1.1.jar')
+    compile files('libs/libammsdk.jar')
+    compile files('libs/mqttandroidlib.jar')
+    compile files('libs/okhttp-2.5.0.jar')
+    compile files('libs/okio-1.6.0.jar')
+    compile files('libs/qiniu-android-sdk-7.0.9.jar')
+    compile files('libs/xUtils-2.6.2.jar')
+    compile 'com.github.bumptech.glide:glide:3.6.1'
+    compile project(':galleryfinal')
+    compile files('libs/jpush-android-2.1.9.jar')
+    compile files('libs/MobCommons-2016.0830.1940.jar')
+    compile files('libs/MobTools-2016.0830.1940.jar')
+    compile files('libs/ShareSDK-Core-2.7.7.jar')
+    compile files('libs/ShareSDK-QQ-2.7.7.jar')
+    compile files('libs/ShareSDK-QZone-2.7.7.jar')
+    compile files('libs/ShareSDK-SinaWeibo-2.7.7.jar')
+    compile files('libs/ShareSDK-Wechat-2.7.7.jar')
+    compile files('libs/ShareSDK-Wechat-Core-2.7.7.jar')
+    compile files('libs/ShareSDK-Wechat-Favorite-2.7.7.jar')
+    compile files('libs/ShareSDK-Wechat-Moments-2.7.7.jar')
+    compile files('libs/uk-co-senab-photoview.jar')
+    compile files('libs/tbs_sdk_thirdapp_v2.5.0.1031_36880_sharewithdownload_obfs_20161107_154437.jar')
+    compile files('libs/Msc.jar')
+    compile files('libs/Sunflower.jar')
+    compile files('libs/nineoldandroids-2.4.0.jar')
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile files('libs/umeng-analytics-v6.0.9.jar')
+}

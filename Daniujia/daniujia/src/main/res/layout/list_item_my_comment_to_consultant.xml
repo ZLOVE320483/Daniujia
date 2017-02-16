@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="12dp"
+        android:paddingTop="15dp">
+
+        <RelativeLayout
+            android:id="@+id/container"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content">
+            <com.xiaojia.daniujia.ui.views.imageview.RoundedImageView
+                android:id="@+id/id_avatar"
+                android:layout_width="36dp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_avatar_default"
+                app:riv_oval="true" />
+
+            <TextView
+                android:id="@+id/id_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/id_avatar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="6dp"
+                android:textSize="12sp"
+                android:textColor="@color/second_text_color"
+                android:text="@string/app_name"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/id_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/container"
+            android:layout_marginLeft="12dp"
+            android:textSize="15sp"
+            android:lineSpacingExtra="3sp"
+            android:textColor="@color/first_text_color"
+            android:text="@string/refund_tip"/>
+
+        <TextView
+            android:id="@+id/id_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/id_content"
+            android:layout_alignLeft="@+id/id_content"
+            android:text="2016-11-11"
+            android:layout_marginTop="12dp"
+            android:textSize="12sp"
+            android:textColor="@color/third_text_color"/>
+
+        <ImageView
+            android:id="@+id/id_divider_1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_divider"
+            android:layout_alignLeft="@+id/id_time"
+            android:layout_marginTop="15dp"
+            android:src="@color/separate"
+            android:layout_below="@+id/id_time"/>
+    </RelativeLayout>
+
+
+
+</LinearLayout>

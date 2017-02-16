@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_content_bg">
+
+    <include
+        android:id="@+id/id_top_bar"
+        layout="@layout/layout_common_pic_title_bar" />
+
+    <View
+        android:id="@+id/id_divider_1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:layout_below="@+id/id_top_bar"
+        android:background="@color/common_line_color" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/common_content_bg"
+        android:layout_below="@+id/id_divider_1"
+        android:layout_above="@+id/confirm"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/common_content_bg"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/order_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_common_grey_border"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <com.xiaojia.daniujia.ui.views.imageview.RoundedImageView
+                        android:id="@+id/expert_header"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/ic_avatar_default"
+                        app:riv_oval="true" />
+
+                    <TextView
+                        android:id="@+id/expert_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/expert_header"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="12dp"
+                        android:text="吴晶"
+                        android:textColor="@color/first_text_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/position_corp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/expert_name"
+                        android:layout_marginTop="8dp"
+                        android:layout_alignLeft="@+id/expert_name"
+                        android:textColor="@color/second_text_color"
+                        android:textSize="13sp"
+                        android:text="产品经理 | 上海晓家网络"/>
+
+
+                    <TextView
+                        android:id="@+id/consult_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/position_corp"
+                        android:layout_marginTop="8dp"
+                        android:layout_alignLeft="@+id/expert_name"
+                        android:textColor="@color/blue_text"
+                        android:textSize="13sp"
+                        android:text="图文约谈:"/>
+
+                    <TextView
+                        android:id="@+id/per_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/position_corp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/consult_type"
+                        android:textColor="@color/second_text_color"
+                        android:textSize="13sp"
+                        android:text="10元/次"/>
+
+                    <TextView
+                        android:id="@+id/service_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/consult_type"
+                        android:layout_marginTop="8dp"
+                        android:layout_alignLeft="@id/consult_type"
+                        android:textColor="@color/second_text_color"
+                        android:textSize="13sp"
+                        android:text="共计:  1次"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/second_text_color"
+                        android:textSize="13sp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="元"/>
+
+                    <TextView
+                        android:id="@+id/total_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/unit"
+                        android:text="200"
+                        android:textSize="20sp"
+                        android:layout_marginRight="6dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/common_orange"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/second_text_color"
+                        android:textSize="13sp"
+                        android:layout_marginRight="6dp"
+                        android:layout_toLeftOf="@+id/total_price"
+                        android:layout_marginTop="5dp"
+                        android:text="合计:"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp">
+
+                <ImageView
+                    android:id="@+id/image1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/description" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="7dp"
+                    android:layout_toRightOf="@+id/image1"
+                    android:text="@string/question_desc"
+                    android:textColor="@color/first_text_color"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/refund"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:drawableLeft="@drawable/reward_answers_note"
+                    android:drawablePadding="5dp"
+                    android:text="不满意退款"
+                    android:textColor="@color/blue_text"
+                    android:gravity="center_vertical"
+                    android:textSize="12sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp">
+
+                <com.xiaojia.daniujia.ui.views.StillScrollEditText
+                    android:id="@+id/question_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/shape_common_grey_border"
+                    android:gravity="left|top"
+                    android:hint="@string/input_question_desc"
+                    android:inputType="textMultiLine"
+                    android:lines="5"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="7dp"
+                    android:paddingTop="7dp"
+                    android:textColor="@color/first_text_color"
+                    android:textColorHint="@color/third_text_color"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/input_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/question_desc"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="60dp"
+                    android:text="0"
+                    android:textColor="@color/third_text_color" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/question_desc"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="20dp"
+                    android:text="/ 500"
+                    android:textColor="@color/third_text_color" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/question_example"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="10dp"
+                android:padding="6dp"
+                android:text="@string/reference_example"
+                android:textColor="@color/third_text_color"
+                android:textSize="12sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/image2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/introduce" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="7dp"
+                    android:layout_toRightOf="@+id/image2"
+                    android:text="@string/e_person_profile"
+                    android:textColor="@color/first_text_color"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp">
+
+                <com.xiaojia.daniujia.ui.views.StillScrollEditText
+                    android:id="@+id/person_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/shape_common_grey_border"
+                    android:gravity="left|top"
+                    android:hint="@string/input_account_desc"
+                    android:inputType="textMultiLine"
+                    android:lines="5"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="7dp"
+                    android:paddingTop="7dp"
+                    android:textColor="@color/first_text_color"
+                    android:textColorHint="@color/third_text_color"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/person_input_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/person_edit"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="60dp"
+                    android:text="0"
+                    android:textColor="@color/third_text_color" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/person_edit"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="20dp"
+                    android:text="/ 500"
+                    android:textColor="@color/third_text_color" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/account_example"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="10dp"
+                android:padding="6dp"
+                android:text="@string/reference_example"
+                android:textColor="@color/third_text_color"
+                android:layout_marginBottom="15dp"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/confirm"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/blue_text"
+        android:layout_alignParentBottom="true"
+        android:text="约    谈"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+</RelativeLayout>

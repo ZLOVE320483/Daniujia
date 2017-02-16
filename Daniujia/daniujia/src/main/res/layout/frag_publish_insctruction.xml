@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/confirm"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/blue_text"
+        android:text="知道了"
+        android:textColor="@color/white"
+        android:textSize="17sp"/>
+
+    <com.xiaojia.daniujia.ui.views.NoVisibleFullScreenScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/confirm"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/id_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:padding="12dp"
+                    android:src="@drawable/reward_answers_close"/>
+
+                <TextView
+                    android:id="@+id/instruction_tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="52dp"
+                    android:text="顾问需求发布说明"
+                    android:textColor="@color/blue_text"
+                    android:textSize="25sp"/>
+
+
+                <com.xiaojia.daniujia.ui.views.MyListView2
+                    android:id="@+id/instruction_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="35dp"
+                    android:cacheColorHint="@android:color/transparent"
+                    android:divider="@null"
+                    android:layout_below="@+id/instruction_tv_title"
+                    android:listSelector="@android:color/transparent">
+
+                </com.xiaojia.daniujia.ui.views.MyListView2>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </com.xiaojia.daniujia.ui.views.NoVisibleFullScreenScrollView>
+
+
+</RelativeLayout>

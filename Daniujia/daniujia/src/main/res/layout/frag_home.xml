@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/common_top_bar_bg"
+                android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/search_container"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/expert_search_bg"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/search"/>
+
+        <TextView
+            android:id="@+id/et_search"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="8dp"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="@string/search_expert_position"
+            android:textColor="@color/third_text_color"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/home_separate_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:layout_below="@id/search_container"
+        android:layout_marginTop="7dp"
+        android:background="@color/third_text_color"/>
+
+    <com.xiaojia.daniujia.ui.views.refreshscroll.PullToRefreshScrollView
+        android:id="@+id/home_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_below="@id/home_separate_line">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:background="@color/white">
+
+                <com.xiaojia.daniujia.ui.views.RollViewPager
+                    android:id="@+id/roll_scroll_pic"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp" />
+
+                <LinearLayout
+                    android:id="@+id/iv_dot_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingBottom="17dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="17dp">
+
+                <LinearLayout
+                    android:id="@+id/home_look_for_expert"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/looking_for_an_expert"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="29dp"
+                        android:gravity="center_horizontal"
+                        android:text="-  寻 找 专 家  -"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_horizontal"
+                        android:text="工作难题1对1解答"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/home_pay_of_ask"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="11dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/reward_questions_and_answers"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="29dp"
+                        android:gravity="center_horizontal"
+                        android:text="-  悬 赏 问 答  -"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_horizontal"
+                        android:text="重要问题 多位专家建议"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_height"
+                android:background="@color/separate"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_height"
+                android:layout_marginTop="10dp"
+                android:background="@color/separate"/>
+
+            <RelativeLayout
+                android:id="@+id/home_rl_become_expert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/home_become_an_expert"
+                android:paddingBottom="17dp"
+                android:paddingTop="17dp">
+
+                <View
+                    android:layout_width="116dp"
+                    android:layout_height="@dimen/divider_height"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="6dp"
+                    android:background="@color/separate"/>
+
+                <TextView
+                    android:id="@+id/home_recruit_expert"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/white"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="@string/recruit_expert"
+                    android:textColor="@color/second_text_color"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/home_recruit_expert"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:text="- 成 为 专 家 -"
+                    android:textColor="@color/first_text_color"
+                    android:textSize="18sp"/>
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/home_view_line_one"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_height"
+                android:background="@color/separate"/>
+
+            <View
+                android:id="@+id/home_view_line_two"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_height"
+                android:layout_marginTop="10dp"
+                android:background="@color/separate"/>
+
+            <RelativeLayout
+                android:id="@+id/home_rl_activity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingBottom="17dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="17dp">
+
+                <View
+                    android:layout_width="84dp"
+                    android:layout_height="@dimen/divider_height"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="6dp"
+                    android:background="@color/separate"/>
+
+                <TextView
+                    android:id="@+id/home_tv_activity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/white"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="活动"
+                    android:textColor="@color/second_text_color"
+                    android:textSize="12sp"/>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="188dp"
+                    android:layout_below="@id/home_tv_activity"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/white">
+
+                    <com.xiaojia.daniujia.ui.views.RollViewPager
+                        android:id="@+id/roll_activity"
+                        android:layout_width="match_parent"
+                        android:layout_height="188dp" />
+
+                    <LinearLayout
+                        android:id="@+id/iv_dot_ll_activity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_height"
+                android:background="@color/separate"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_height"
+                android:layout_marginTop="10dp"
+                android:background="@color/separate"/>
+
+            <com.xiaojia.daniujia.ui.views.PagerSlidingTabStrip
+                android:id="@+id/home_tab_head"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@android:color/white"
+                app:pstsDividerColor="@android:color/transparent"
+                app:pstsIndicatorColor="@color/blue_text"
+                app:pstsIndicatorHeight="2dp"
+                app:pstsShouldExpand="true"
+                app:pstsTabBackground="@drawable/background_tab"
+                app:pstsUnderlineColor="@android:color/white"
+                app:pstsUnderlineHeight="2dp"
+                app:selectedTabTextColor="@color/blue_text"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_divider"
+                android:contentDescription="@string/app_name"
+                android:src="@color/separate"/>
+
+            <com.xiaojia.daniujia.ui.views.CustomViewpager
+                android:id="@+id/home_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white">
+            </com.xiaojia.daniujia.ui.views.CustomViewpager>
+
+        </LinearLayout>
+
+    </com.xiaojia.daniujia.ui.views.refreshscroll.PullToRefreshScrollView>
+
+    <ImageView
+        android:id="@+id/home_ask_question"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/home_question"
+        android:layout_marginTop="293dp"
+        android:visibility="gone"/>
+
+    <com.xiaojia.daniujia.ui.views.PagerSlidingTabStrip
+        android:id="@+id/suspend_tab_head"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@android:color/white"
+        android:layout_below="@id/home_separate_line"
+        app:pstsDividerColor="@android:color/transparent"
+        app:pstsIndicatorColor="@color/blue_text"
+        app:pstsIndicatorHeight="2dp"
+        app:pstsShouldExpand="true"
+        app:pstsTabBackground="@drawable/background_tab"
+        app:pstsUnderlineColor="@android:color/white"
+        app:pstsUnderlineHeight="2dp"
+        app:selectedTabTextColor="@color/blue_text"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/home_separate"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_divider"
+        android:contentDescription="@string/app_name"
+        android:layout_below="@id/suspend_tab_head"
+        android:src="@color/separate"/>
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/good_at_detail_relative"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:text="初创型团队建设"
+    android:singleLine="true"
+    android:textColor="#222222"
+    android:textSize="16sp" />
+

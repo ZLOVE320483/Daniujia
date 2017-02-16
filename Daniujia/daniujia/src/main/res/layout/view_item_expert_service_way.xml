@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/container_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/id_txt_consult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/graphics_consult"
+                android:layout_centerInParent="true"
+                android:drawableRight="@drawable/help"
+                android:drawablePadding="6dp"
+                android:textColor="@color/first_text_color"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="@dimen/list_divider"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_name"
+            android:src="@color/separate" />
+
+        <RelativeLayout
+            android:id="@+id/container_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+
+            <TextView
+                android:id="@+id/id_phone_consult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/phone_consult"
+                android:layout_centerInParent="true"
+                android:drawableRight="@drawable/help"
+                android:drawablePadding="6dp"
+                android:textColor="@color/first_text_color"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="@dimen/list_divider"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_name"
+            android:src="@color/separate" />
+
+        <RelativeLayout
+            android:id="@+id/container_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+
+            <TextView
+                android:id="@+id/id_offline_consult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/offline_consult"
+                android:layout_centerInParent="true"
+                android:drawableRight="@drawable/help"
+                android:drawablePadding="6dp"
+                android:textColor="@color/first_text_color"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

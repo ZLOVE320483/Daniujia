@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_content_bg">
+
+    <include layout="@layout/common_top_bar"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_divider"
+        android:src="@color/common_line_color"
+        android:contentDescription="@string/app_name"/>
+
+    <com.xiaojia.daniujia.ui.views.XListView
+        android:id="@+id/id_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/separate"
+        android:dividerHeight="@dimen/list_divider"
+        android:cacheColorHint="@color/transparent"
+        android:listSelector="@android:color/transparent"/>
+
+</LinearLayout>

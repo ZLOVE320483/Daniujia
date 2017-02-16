@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:paddingRight="12dp">
+
+        <RelativeLayout
+            android:layout_width="60dp"
+            android:layout_height="match_parent">
+
+            <com.xiaojia.daniujia.ui.views.imageview.RoundedImageView
+                android:id="@+id/id_avatar"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_avatar_default"
+                app:riv_oval="true"/>
+
+            <TextView
+                android:id="@+id/id_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/id_avatar"
+                android:layout_centerHorizontal="true"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:layout_marginTop="6dp"
+                android:text="@string/app_name"
+                android:textColor="@color/second_text_color"
+                android:textSize="12sp"/>
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/id_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/selector_confirm_expert_textview"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:text="确定该专家为顾问"
+            android:textColor="@color/third_text_color"
+            android:textSize="10sp"/>
+
+        <TextView
+            android:id="@+id/id_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/id_confirm"
+            android:drawableLeft="@drawable/ic_requirement_call"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:text="电话"
+            android:textColor="@color/third_text_color"
+            android:textSize="10sp"/>
+
+
+        <TextView
+            android:id="@+id/id_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/id_call"
+            android:drawableLeft="@drawable/ic_requirement_chat"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:text="聊天"
+            android:textColor="@color/third_text_color"
+            android:textSize="10sp"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_divider"
+            android:layout_alignParentBottom="true"
+            android:contentDescription="@string/app_name"
+            android:src="@color/separate"/>
+    </RelativeLayout>
+
+</LinearLayout>

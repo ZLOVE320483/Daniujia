@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <include layout="@layout/common_top_bar"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_divider"
+        android:src="@color/common_line_color"
+        android:contentDescription="@string/app_name"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center_horizontal"
+        android:layout_weight="6"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/happy_to_contact"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:textSize="17sp"
+            android:textColor="@color/first_text_color"
+            android:gravity="center"
+            android:text="我们已经收到您的具体需求"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="17sp"
+            android:textColor="@color/first_text_color"
+            android:gravity="center"
+            android:text="会尽快与您联系"
+            />
+
+        <TextView
+            android:id="@+id/commit_success_tv_contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:textSize="15sp"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:textColor="@color/second_text_color"
+            android:gravity="center"
+            android:lineSpacingExtra="4dp"
+            android:autoLink="phone"
+            android:textColorLink="@color/second_text_color"
+            android:text="你也可以登录后直接和大牛家客服进行沟通，或者拨打客服电话4000903022与我们联系"
+            />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

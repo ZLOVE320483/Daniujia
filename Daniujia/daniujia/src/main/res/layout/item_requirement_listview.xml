@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/separate"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/requirement_item_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxEms="11"
+                android:maxLines="1"
+                android:text="法律顾问"
+                android:textColor="@color/first_text_color"
+                android:textSize="17sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/requirement_item_address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="上海"
+                android:textColor="@color/forth_text_color"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="预算"
+                android:textColor="@color/forth_text_color"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:id="@+id/requirement_item_budget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="5万左右"
+                android:textColor="@color/common_orange"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/require_publisher_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:drawablePadding="5dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="上海大成技术科技有限公司"
+            android:textColor="@color/second_text_color"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:id="@+id/requirement_item_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:ellipsize="end"
+            android:lineSpacingExtra="4dp"
+            android:maxLines="4"
+            android:text="@string/require_description"
+            android:textColor="@color/first_text_color"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/requirement_item_at_present"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:drawableLeft="@drawable/demand_symbol"
+            android:drawablePadding="1dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="到现场服务：预计十天左右，参加相关会议和讨论"
+            android:textColor="@color/second_text_color"
+            android:textSize="13sp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/shape_45rectangle_white_corner"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:src="@drawable/demand_term"/>
+
+            <TextView
+                android:id="@+id/requirement_item_server_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="6dp"
+                android:paddingLeft="6dp"
+                android:paddingRight="8dp"
+                android:paddingTop="6dp"
+                android:text="服务期1年"
+                android:textColor="@color/second_text_color"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/require_ll_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/require_view_line"
+                android:layout_width="2.5dp"
+                android:layout_height="10dp"
+                android:background="@color/grey_darker"/>
+
+            <TextView
+                android:id="@+id/require_text_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:gravity="center"
+                android:text="需求已关闭"
+                android:textColor="@color/grey_darker"
+                android:textSize="13sp"/>
+
+            <View
+                android:id="@+id/require_view_status_dot"
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/bg_circle_textview"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/requirement_item_expert_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="报名专家  2"
+                android:textColor="@color/third_text_color"
+                android:textSize="13sp"/>
+
+            <View
+                android:id="@+id/require_view_sign_up_dot"
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/bg_circle_textview"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/requirement_item_view_count"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_weight="1"
+                android:text="浏览数  30"
+                android:textColor="@color/third_text_color"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:id="@+id/requirement_item_time_to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="有效期  2017-01-12"
+                android:textColor="@color/third_text_color"
+                android:textSize="13sp"/>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/requirement_item_line"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/separate"/>
+
+        <RelativeLayout
+            android:id="@+id/requirement_item_rl_cooperation"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="合作顾问"
+                android:textColor="@color/third_text_color"
+                android:textSize="13sp"/>
+
+            <com.xiaojia.daniujia.ui.views.CircleImageView
+                android:id="@+id/requirement_item_circle_one"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/img_person_bg_3"
+                app:civ_border_color="@color/third_text_color"
+                app:civ_border_width="1dp"/>
+
+            <com.xiaojia.daniujia.ui.views.CircleImageView
+                android:id="@+id/requirement_item_circle_two"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/img_person_bg_3"
+                app:civ_border_color="@color/third_text_color"
+                app:civ_border_width="1dp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/separate"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/transparent"/>
+
+</LinearLayout>

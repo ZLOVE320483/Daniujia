@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Daniujia.iml" filepath="$PROJECT_DIR$/Daniujia.iml" />
+      <module fileurl="file://$PROJECT_DIR$/androidTpl/androidTpl.iml" filepath="$PROJECT_DIR$/androidTpl/androidTpl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/daniujia/daniujia.iml" filepath="$PROJECT_DIR$/daniujia/daniujia.iml" />
+      <module fileurl="file://$PROJECT_DIR$/galleryfinal/galleryfinal.iml" filepath="$PROJECT_DIR$/galleryfinal/galleryfinal.iml" />
+    </modules>
+  </component>
+</project>

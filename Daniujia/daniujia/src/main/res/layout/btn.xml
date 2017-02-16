@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:textSize="14sp"
+    android:singleLine="true"
+    android:ellipsize="end"
+    android:padding="6dp"
+    android:textColor="@color/first_text_color"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

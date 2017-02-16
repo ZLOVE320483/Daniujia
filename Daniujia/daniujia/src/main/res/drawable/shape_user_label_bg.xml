@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <solid android:color="@color/common_message_event_content_bg" />
+
+    <corners android:radius="90dp"/>
+
+    <stroke
+        android:width="@dimen/list_divider"
+        android:color="@color/separate" />
+</shape>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/internet"
+            android:contentDescription="@string/app_name"/>
+
+        <TextView
+            android:id="@+id/main_direction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/icon"
+            android:text="@string/app_name"
+            android:textSize="15sp"
+            android:layout_marginLeft="8dp"
+            android:textColor="@color/first_text_color"/>
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/grey_drag_bottom"
+            android:contentDescription="@string/app_name"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+</LinearLayout>

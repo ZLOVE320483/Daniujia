@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="10dp">
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/step1"
+            android:layout_width="15dp"
+            android:src="@drawable/number1_h"
+            android:layout_height="15dp"
+            android:layout_marginLeft="19dp"
+            android:layout_alignParentLeft="true"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/noddle1_2"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@+id/step1"
+            android:layout_marginTop="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/noddle" />
+
+        <ImageView
+            android:id="@+id/step2"
+            android:layout_toRightOf="@+id/noddle1_2"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/number2"
+            android:layout_marginLeft="12dp"/>
+
+        <ImageView
+            android:id="@+id/noddle2_3"
+            android:layout_marginRight="12dp"
+            android:layout_toLeftOf="@+id/step3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:src="@drawable/noddle" />
+
+        <ImageView
+            android:id="@+id/step3"
+            android:layout_centerHorizontal="true"
+            android:layout_width="15dp"
+            android:src="@drawable/number3"
+            android:layout_height="15dp"/>
+
+        <ImageView
+            android:id="@+id/noddle3_4"
+            android:layout_toRightOf="@+id/step3"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:src="@drawable/noddle" />
+
+        <ImageView
+            android:id="@+id/step4"
+            android:layout_toRightOf="@+id/noddle3_4"
+            android:layout_width="15dp"
+            android:src="@drawable/number4"
+            android:layout_height="15dp"
+            android:layout_marginLeft="14dp"/>
+
+        <ImageView
+            android:id="@+id/noddle4_complete"
+            android:layout_toLeftOf="@+id/step5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="7dp"
+            android:src="@drawable/noddle" />
+
+        <ImageView
+            android:id="@+id/step5"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="19dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/complete" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/step_1_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="14dp"
+            android:text="待确认"
+            android:textColor="@color/common_green"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/step_2_desc"
+            android:layout_toLeftOf="@+id/step_3_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="46dp"
+            android:text="待支付"
+            android:textColor="@color/second_text_color"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/step_3_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="进行中"
+            android:textColor="@color/second_text_color"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/step_4_desc"
+            android:layout_toRightOf="@id/step_3_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="待评价"
+            android:textColor="@color/second_text_color"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/step_5_desc"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_height="wrap_content"
+            android:text="已完成"
+            android:textColor="@color/second_text_color"
+            android:textSize="10sp" />
+    </RelativeLayout>
+</LinearLayout>

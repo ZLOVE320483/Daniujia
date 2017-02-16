@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp">
+
+            <com.xiaojia.daniujia.ui.views.imageview.RoundedImageView
+                android:id="@+id/iv_cr_head"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerInside"
+                app:riv_oval="true" />
+
+            <TextView
+                android:id="@+id/tv_cr_unread"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/bg_circle_textview"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:visibility="invisible"
+                tools:ignore="SmallSp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:id="@+id/tv_cr_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="@color/first_text_color"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_cr_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="@string/app_name"
+                android:textColor="@color/common_line_color"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/image_state"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="30dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/img_send_fail"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/item_send_fail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="30dp"
+                android:layout_toRightOf="@+id/image_state"
+                android:src="@drawable/send_fail2"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_cr_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_toRightOf="@+id/item_send_fail"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/second_text_color"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/iv_cr_server_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/tv_cr_time"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:contentDescription="@string/app_name" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

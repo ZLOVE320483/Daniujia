@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/common_content_bg">
+
+    <ImageView
+        android:id="@id/id_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/reward_answers_close"
+        android:layout_alignParentRight="true"
+        android:padding="12dp"/>
+
+    <TextView
+        android:id="@+id/id_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:textColor="@color/third_text_color"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textSize="25sp"
+        android:text="请说话..."/>
+
+    <com.xiaojia.daniujia.ui.views.LoadingView
+        android:id="@+id/load"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_above="@+id/tip"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:visibility="gone"
+        android:layout_margin="@dimen/activity_horizontal_margin"/>
+
+    <com.xiaojia.daniujia.ui.views.LoadingZeroVolumeView
+        android:id="@+id/load_zero"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_above="@+id/tip"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:visibility="visible"
+        android:layout_margin="@dimen/activity_horizontal_margin"/>
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="40dp"
+        android:layout_above="@+id/tip"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点击说话"
+            android:textSize="14sp"
+            android:textColor="@color/theme_blue"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/follow"
+            android:layout_marginTop="6dp"/>
+
+        <ImageView
+            android:id="@+id/voice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/voice_big"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/third_text_color"
+        android:textSize="12sp"
+        android:text="语音技术由科大讯飞提供"/>
+
+</RelativeLayout>

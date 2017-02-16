@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_content_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/header_to_be_expert" />
+
+    <EditText
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_rect_white_bg"
+        android:gravity="start"
+        android:hint="@string/account_profile_new"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:textColorHint="@color/third_text_color"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/example"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="6dp"
+        android:padding="4dp"
+        android:text="参考示例"
+        android:textColor="@color/blue_text"
+        android:textSize="13sp" />
+</LinearLayout>

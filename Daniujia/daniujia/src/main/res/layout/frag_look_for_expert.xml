@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/common_content_bg"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#FAFAFA"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="12dp">
+
+        <ImageView
+            android:id="@+id/look_for_iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingRight="14dp"
+            android:paddingLeft="12dp"
+            android:src="@drawable/ic_back_grey"/>
+
+        <RelativeLayout
+            android:id="@+id/search_container"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/expert_search_bg">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/search" />
+
+            <TextView
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@null"
+                android:layout_marginRight="50dp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="28dp"
+                android:layout_centerVertical="true"
+                android:text="@string/search_expert_position"
+                android:singleLine="true"
+                android:textColor="@color/third_text_color"
+                android:textSize="12sp"/>
+
+            <ImageView
+                android:id="@+id/speech_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:padding="8dp"
+                android:src="@drawable/voice_grey"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/common_line"/>
+
+    <com.xiaojia.daniujia.ui.views.PagerSlidingTabStrip
+        android:id="@+id/look_for_tab_head"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@android:color/white"
+        app:pstsDividerColor="@android:color/transparent"
+        app:pstsIndicatorColor="@color/blue_text"
+        app:pstsIndicatorHeight="2dp"
+        app:pstsShouldExpand="true"
+        app:pstsTabBackground="@drawable/background_tab"
+        app:pstsUnderlineColor="@android:color/white"
+        app:pstsUnderlineHeight="2dp"
+        app:selectedTabTextColor="@color/blue_text"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_divider"
+        android:src="@color/separate"
+        android:contentDescription="@string/app_name"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/look_for_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

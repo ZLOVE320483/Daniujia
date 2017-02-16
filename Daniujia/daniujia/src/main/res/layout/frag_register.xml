@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_content_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_top_bar"/>
+
+    <include layout="@layout/common_line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/shape_common_grey_border"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_account"
+                android:contentDescription="@string/app_name"/>
+
+            <EditText
+                android:id="@+id/id_phone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:hint="@string/register_phone"
+                android:inputType="phone"
+                android:layout_marginLeft="25dp"
+                android:textColor="@color/first_text_color"
+                android:textColorHint="@color/third_text_color"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_divider"
+            android:layout_marginLeft="10dp"
+            android:contentDescription="@string/app_name"
+            android:src="@color/separate" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_verify_code"
+                android:contentDescription="@string/app_name"/>
+
+            <EditText
+                android:id="@+id/id_verify_code"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp"
+                android:background="@android:color/transparent"
+                android:layout_toLeftOf="@+id/id_get_verify_code"
+                android:hint="@string/msg_verify_code"
+                android:textColor="@color/first_text_color"
+                android:textColorHint="@color/third_text_color"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/id_get_verify_code"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/shape_common_grey_solid"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:text="@string/get_ver_code"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_divider"
+            android:layout_marginLeft="10dp"
+            android:contentDescription="@string/app_name"
+            android:src="@color/separate" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_user_name"
+                android:contentDescription="@string/app_name"/>
+
+            <EditText
+                android:id="@+id/id_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp"
+                android:background="@android:color/transparent"
+                android:hint="用户名（可使用字母、数字、下划线）"
+                android:textColor="@color/first_text_color"
+                android:textColorHint="@color/third_text_color"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_divider"
+            android:layout_marginLeft="10dp"
+            android:contentDescription="@string/app_name"
+            android:src="@color/separate" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_password"
+                android:contentDescription="@string/app_name"/>
+
+            <EditText
+                android:id="@+id/id_password"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp"
+                android:background="@android:color/transparent"
+                android:hint="密码（6-14位字符）"
+                android:inputType="textPassword"
+                android:textColor="@color/first_text_color"
+                android:textColorHint="@color/third_text_color"
+                android:layout_toLeftOf="@+id/show_pwd"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/show_pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="10dp"
+                android:scaleType="center"
+                android:src="@drawable/ic_hide_pwd"
+                android:layout_alignParentRight="true"
+                android:contentDescription="@string/app_name"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/id_register"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/shape_rect_blue"
+        android:text="注   册"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:id="@+id/protocol_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="阅读并同意"
+            android:drawableLeft="@drawable/ic_agree_protocol"
+            android:drawablePadding="8dp"
+            android:textColor="@color/second_text_color"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dnj_disclaimer"
+            android:layout_marginLeft="3dp"
+            android:textColor="@color/blue_text"/>
+
+    </LinearLayout>
+
+</LinearLayout>

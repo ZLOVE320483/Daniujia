@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_content_bg">
+
+    <include
+        android:id="@+id/id_top_bar"
+        layout="@layout/common_top_bar_chat" />
+
+    <ImageView
+        android:id="@+id/id_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_divider"
+        android:layout_below="@+id/id_top_bar"
+        android:background="@color/common_line_color" />
+
+    <RelativeLayout
+        android:id="@+id/order_container"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/id_line"
+        android:background="@color/common_message_event_content_bg"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/order_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/blue_text"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/order_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@+id/order_no"
+            android:textColor="@color/blue_text"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/id_show_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_arrow_down_blue" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/id_line_2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_divider"
+        android:layout_below="@+id/order_container"
+        android:background="@color/common_message_event_border" />
+
+    <com.xiaojia.daniujia.ui.views.XListView
+        android:id="@+id/xlv_chat_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/view_chat_line"
+        android:layout_below="@+id/id_line_2"
+        android:background="@color/common_content_bg"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:listSelector="#00000000"
+        android:paddingTop="10dp"
+        android:transcriptMode="normal" />
+
+    <View
+        android:id="@+id/view_chat_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/msg_send_widget"
+        android:background="@color/common_line_color" />
+
+    <com.xiaojia.daniujia.ui.views.MsgSendWidget
+        android:id="@+id/msg_send_widget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"></com.xiaojia.daniujia.ui.views.MsgSendWidget>
+
+    <com.xiaojia.daniujia.ui.views.MultiDirectionSlidingDrawer xmlns:my="http://schemas.android.com/apk/res/com.xiaojia.daniujia"
+        android:id="@+id/drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/order_container"
+        my:content="@+id/order_content"
+        my:direction="topToBottom"
+        my:handle="@+id/handle">
+
+        <LinearLayout
+            android:id="@+id/order_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"></LinearLayout>
+
+        <ImageView
+            android:id="@id/handle"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:src="@color/transparent" />
+    </com.xiaojia.daniujia.ui.views.MultiDirectionSlidingDrawer>
+
+
+</RelativeLayout>

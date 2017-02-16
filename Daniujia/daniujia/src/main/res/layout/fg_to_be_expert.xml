@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/head_background">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:scaleType="center"
+            android:src="@drawable/white_back" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/id_top_bar"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/middle_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:text="为企业对接专家"
+                android:textColor="@color/blue_text"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/tv_why"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/middle_image"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="38dp"
+                android:background="@drawable/shape_rect_round_white_bg"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_point"
+                    android:layout_marginTop="23dp"
+                    android:drawablePadding="8dp"
+                    android:text="可以为更多人解决工作中的问题；"
+                    android:textColor="@color/second_text_color"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_point"
+                    android:drawablePadding="8dp"
+                    android:layout_marginTop="3dp"
+                    android:text="能在最大程度上发挥您的专业价值；"
+                    android:textColor="@color/second_text_color"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:paddingBottom="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/app_name"
+                        android:layout_marginTop="7dp"
+                        android:src="@drawable/ic_point" />
+
+                    <com.xiaojia.daniujia.ui.views.SplitTextView
+                        android:id="@+id/fg_to_be_expert_fragment_tv_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:lineSpacingMultiplier="1.2"
+                        android:layout_marginTop="2dp"
+                        android:text="更能够获得一定的回报收入，大牛家的每位专家都有一个初始服务价格（图文约谈100元/次，电话约谈10元/分钟，线下约谈1000元/小时），专家提供一次好评服务后，即可根据个人情况，修改自己的服务价格。"
+                        android:textColor="@color/second_text_color"
+                        android:textSize="14sp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/middle_image"
+                android:layout_centerHorizontal="true"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:text="专家在大牛家可以做什么?"
+                    android:textColor="@color/blue_text"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <com.xiaojia.daniujia.ui.views.SplitTextView
+                android:id="@+id/tv_how"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_why"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/shape_rect_round_white_bg"
+                android:lineSpacingMultiplier="1.2"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="23dp"
+                android:paddingBottom="20dp"
+                android:text="@string/how"
+                android:textColor="@color/second_text_color"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_why"
+                android:layout_centerHorizontal="true"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="如何成为大牛家专家?"
+                    android:textColor="@color/blue_text"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <com.xiaojia.daniujia.ui.views.SplitTextView
+                android:id="@+id/tv_anon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_how"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/shape_rect_round_white_bg"
+                android:lineSpacingMultiplier="1.2"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="23dp"
+                android:paddingBottom="20dp"
+                android:text="成为匿名专家，您上传的头像，填写的真实姓名和当前公司名称将不显示在专家个人主页上。"
+                android:textColor="@color/second_text_color"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_how"
+                android:layout_centerHorizontal="true"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="匿名专家权益"
+                    android:textColor="@color/blue_text"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/confirm"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/theme_blue"
+        android:text="@string/to_be_expert"
+        android:textColor="@color/white"
+        android:textSize="19sp" />
+</LinearLayout>

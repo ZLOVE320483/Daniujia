@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <com.xiaojia.daniujia.ui.views.XListView
+        android:id="@+id/id_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@color/common_content_bg"
+        android:dividerHeight="@dimen/divider_height"
+        android:footerDividersEnabled="true"
+        android:headerDividersEnabled="true"
+        android:listSelector="@android:color/transparent"
+        android:overScrollFooter="@color/transparent" />
+
+</LinearLayout>

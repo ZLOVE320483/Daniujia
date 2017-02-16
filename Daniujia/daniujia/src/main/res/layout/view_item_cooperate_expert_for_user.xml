@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/container"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <com.xiaojia.daniujia.ui.views.imageview.RoundedImageView
+                android:id="@+id/id_avatar"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_person_bg_3"
+                app:riv_oval="true"/>
+
+            <TextView
+                android:id="@+id/id_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/id_avatar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="6dp"
+                android:textSize="12sp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textColor="@color/second_text_color"
+                android:text="@string/app_name"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/expert_comment_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/container"
+            android:layout_marginRight="12dp"
+            android:orientation="vertical">
+        </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/topbar_background">
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/id_back"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="center"
+            android:src="@drawable/white_back" />
+
+        <TextView
+            android:id="@+id/id_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="基本资料"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/title_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="6dp"
+            android:padding="10dp"
+            android:text="下一步"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_layout"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <com.xiaojia.daniujia.ui.views.imageview.RoundedImageView
+            android:id="@+id/step1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/basic_information" />
+
+        <View
+            android:id="@+id/step1_line"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/divider_height"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="#77ffffff" />
+
+        <com.xiaojia.daniujia.ui.views.imageview.RoundedImageView
+            android:id="@+id/step2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/good_at" />
+
+        <View
+            android:id="@+id/step2_line"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/divider_height"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="#77ffffff" />
+
+        <com.xiaojia.daniujia.ui.views.imageview.RoundedImageView
+            android:id="@+id/step3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/personal_profile" />
+
+        <View
+            android:id="@+id/step3_line"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/divider_height"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="#77ffffff" />
+
+        <com.xiaojia.daniujia.ui.views.imageview.RoundedImageView
+            android:id="@+id/step4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/finish" />
+    </LinearLayout>
+</RelativeLayout>

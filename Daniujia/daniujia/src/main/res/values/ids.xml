@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="my_view" type="id"/>
+    <item name="adapter_item_tag_key" type="id"/>
+
+    <item name="id_position" type="id"/>
+    <item name="id_type" type="id"/>
+    <item name="id_view_holder" type="id"/>
+    <item name="id_views_holder" type="id"/>
+    <item name="id_content_message_holder" type="id"/>
+
+    <!-- cursor loader id -->
+    <item name="id_loader_conversations" type="id"/>
+    <item name="id_loader_message" type="id"/>
+    <item name="is_send" type="id"/>    <item name="id_loader_unread_count" type="id"/>
+
+    <item type="id" name="expandable_text"/>
+    <item type="id" name="expand_collapse"/>
+
+    <item type="id" name="scrollview" />
+</resources>

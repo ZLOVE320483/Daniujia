@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_content_bg">
+
+    <include layout="@layout/common_top_bar"/>
+
+    <include layout="@layout/common_line"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_divider"
+        android:src="@color/separate"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/app_name"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/expert_home_container"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/selector_grey_dark"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="主页预览  "
+                android:textSize="16sp"
+                android:drawableLeft="@drawable/modify_home_preview"
+                android:drawablePadding="8dp"
+                android:textColor="@color/first_text_color"
+                android:layout_centerVertical="true"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_arrow_right_grey"
+                android:contentDescription="@string/app_name"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/id_divider_1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_divider"
+            android:src="@color/separate"
+            android:contentDescription="@string/app_name"
+            android:layout_marginLeft="38dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="专家类型"
+                android:textSize="16sp"
+                android:drawableLeft="@drawable/modify_expert_status"
+                android:drawablePadding="8dp"
+                android:textColor="@color/first_text_color"
+                android:layout_centerVertical="true"/>
+
+            <ToggleButton
+                android:id="@+id/toggle_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/toggle_expert_switch_bg"
+                android:checked="true"
+                android:textOff=""
+                android:textOn=""/>
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_divider"
+            android:src="@color/separate"
+            android:contentDescription="@string/app_name"
+            android:layout_marginLeft="38dp"/>
+
+        <RelativeLayout
+            android:id="@+id/basic_info_container"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/selector_grey_dark"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="基本资料"
+                android:textSize="16sp"
+                android:drawableLeft="@drawable/modify_basic_information"
+                android:drawablePadding="8dp"
+                android:textColor="@color/first_text_color"
+                android:layout_centerVertical="true"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_arrow_right_grey"
+                android:contentDescription="@string/app_name"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_divider"
+            android:src="@color/separate"
+            android:contentDescription="@string/app_name"
+            android:layout_marginLeft="38dp"/>
+
+        <RelativeLayout
+            android:id="@+id/expert_direction_container"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/selector_grey_dark"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="擅长方向"
+                android:textSize="16sp"
+                android:drawableLeft="@drawable/modify_good_direction"
+                android:drawablePadding="8dp"
+                android:textColor="@color/first_text_color"
+                android:layout_centerVertical="true"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_arrow_right_grey"
+                android:contentDescription="@string/app_name"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_divider"
+            android:src="@color/separate"
+            android:contentDescription="@string/app_name"
+            android:layout_marginLeft="38dp"/>
+
+        <RelativeLayout
+            android:id="@+id/person_introduce_container"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/selector_grey_dark"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="个人简介"
+                android:textSize="16sp"
+                android:drawableLeft="@drawable/modify_personal_profile"
+                android:drawablePadding="8dp"
+                android:textColor="@color/first_text_color"
+                android:layout_centerVertical="true"/>
+
+            <ImageView
+                android:id="@+id/frag_expert_modify_info_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_arrow_right_grey"
+                android:contentDescription="@string/app_name"/>
+
+            <TextView
+                android:id="@+id/frag_expert_home_tv_verify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="审核中"
+                android:textColor="@color/second_text_color"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="7dp"
+                android:layout_toLeftOf="@id/frag_expert_modify_info_iv"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_divider"
+            android:src="@color/separate"
+            android:contentDescription="@string/app_name"
+            android:layout_marginLeft="38dp"/>
+
+        <RelativeLayout
+            android:id="@+id/work_experience_container"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/selector_grey_dark"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="工作经历"
+                android:textSize="16sp"
+                android:drawableLeft="@drawable/modify_work_experience"
+                android:drawablePadding="8dp"
+                android:textColor="@color/first_text_color"
+                android:layout_centerVertical="true"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_arrow_right_grey"
+                android:contentDescription="@string/app_name"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_divider"
+            android:src="@color/separate"
+            android:contentDescription="@string/app_name"
+            android:layout_marginLeft="38dp"/>
+
+        <RelativeLayout
+            android:id="@+id/education_background_container"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/selector_grey_dark"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="教育背景"
+                android:drawableLeft="@drawable/modify_education"
+                android:drawablePadding="8dp"
+                android:textSize="16sp"
+                android:textColor="@color/first_text_color"
+                android:layout_centerVertical="true"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_arrow_right_grey"
+                android:contentDescription="@string/app_name"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_divider"
+            android:src="@color/separate"
+            android:contentDescription="@string/app_name"
+            android:layout_marginLeft="38dp"/>
+
+        <RelativeLayout
+            android:id="@+id/service_setting_container"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/selector_grey_dark"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="服务设置"
+                android:textSize="16sp"
+                android:drawableLeft="@drawable/modify_service_settings"
+                android:drawablePadding="8dp"
+                android:textColor="@color/first_text_color"
+                android:layout_centerVertical="true"/>
+
+            <ImageView
+                android:id="@+id/frag_expert_home_iv_service_verify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_arrow_right_grey"
+                android:contentDescription="@string/app_name"/>
+
+            <TextView
+                android:id="@+id/frag_expert_home_tv_service_verify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="审核中"
+                android:textColor="@color/second_text_color"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="7dp"
+                android:layout_toLeftOf="@id/frag_expert_home_iv_service_verify"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_divider"
+        android:src="@color/separate"
+        android:contentDescription="@string/app_name"
+        android:layout_marginLeft="10dp"/>
+
+</LinearLayout>

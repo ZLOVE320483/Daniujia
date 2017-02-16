@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_content_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/header_to_be_expert" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.xiaojia.daniujia.ui.views.imageview.RoundedImageView
+                    android:layout_width="88dp"
+                    android:layout_height="88dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="13dp"
+                    android:background="@drawable/white_background"
+                    app:riv_oval="true" />
+
+                <com.xiaojia.daniujia.ui.views.imageview.RoundedImageView
+                    android:id="@+id/avatar"
+                    android:layout_width="84dp"
+                    android:layout_height="84dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/head_portrait"
+                    app:riv_oval="true" />
+
+                <ImageView
+                    android:id="@+id/camera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignRight="@+id/avatar"
+                    android:src="@drawable/upload_avatar" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="13dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="12dp"
+                    android:layout_weight="2"
+                    android:text="姓名"
+                    android:textColor="@color/second_text_color"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="7"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="输入姓名"
+                    android:textColor="@color/first_text_color"
+                    android:textColorHint="@color/third_text_color"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_height"
+                android:background="@color/white">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_height"
+                    android:layout_marginLeft="12dp"
+                    android:background="@color/separate" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="12dp"
+                    android:layout_weight="2"
+                    android:text="工作年限"
+                    android:textColor="@color/second_text_color"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/experience"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="7"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="输入工作年限"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:textColor="@color/first_text_color"
+                    android:textColorHint="@color/third_text_color"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_height"
+                android:background="@color/white">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_height"
+                    android:layout_marginLeft="12dp"
+                    android:background="@color/separate" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="12dp"
+                    android:layout_weight="2"
+                    android:text="所在公司"
+                    android:textColor="@color/second_text_color"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/company"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="7"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="输入目前所在公司"
+                    android:textColor="@color/first_text_color"
+                    android:textColorHint="@color/third_text_color"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_height"
+                android:background="@color/white">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_height"
+                    android:layout_marginLeft="12dp"
+                    android:background="@color/separate" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="12dp"
+                    android:layout_weight="2"
+                    android:text="职位"
+                    android:textColor="@color/second_text_color"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/position"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="7"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="输入当前职位"
+                    android:textColor="@color/first_text_color"
+                    android:textColorHint="@color/third_text_color"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/city"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="12dp"
+                    android:layout_weight="2"
+                    android:text="常驻城市"
+                    android:textColor="@color/second_text_color"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/location"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="7"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/first_text_color"
+                    android:textSize="15dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="12dp"
+                    android:src="@drawable/img_right_arrow" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_height"
+                android:background="@color/white">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_height"
+                    android:layout_marginLeft="12dp"
+                    android:background="@color/separate" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/gender"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="12dp"
+                    android:layout_weight="2"
+                    android:text="性别"
+                    android:textColor="@color/second_text_color"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/gender_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="7"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/first_text_color"
+                    android:textSize="15dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="12dp"
+                    android:src="@drawable/img_right_arrow" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_height"
+                android:background="@color/separate" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_height"
+                android:layout_marginTop="10dp"
+                android:background="@color/separate" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="专家类型"
+                    android:textColor="@color/second_text_color"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/id_help"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="62dp"
+                    android:contentDescription="@string/app_name"
+                    android:padding="5dp"
+                    android:src="@drawable/help" />
+
+                <ToggleButton
+                    android:id="@+id/toggle_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/toggle_expert_switch_bg"
+                    android:checked="true"
+                    android:textOff=""
+                    android:textOn="" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_height"
+                android:background="@color/separate" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@color/common_content_bg" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

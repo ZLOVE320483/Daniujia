@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_content_bg"
+    xmlns:zhy="http://schemas.android.com/apk/res-auto"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <include layout="@layout/order_detail_top_bar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/blue_text">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:orientation="horizontal">
+
+            <com.xiaojia.daniujia.ui.views.orderprogress.RoundProgressBarWidthNumber
+                android:id="@+id/order_progress_out"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                zhy:progress_unreached_color="#7cbff2"
+                zhy:progress_reached_color="#b2d9f7"
+                zhy:progress_text_size="35sp"
+                zhy:progress_reached_bar_height="4dp"
+                android:layout_centerInParent="true"
+                zhy:radius="50dp"/>
+
+            <com.xiaojia.daniujia.ui.views.orderprogress.RoundProgressBarWidthNumber
+                android:id="@+id/order_progress_inner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                zhy:progress_unreached_color="#3b9feb"
+                zhy:progress_reached_color="#4fa9ed"
+                zhy:progress_reached_bar_height="5dp"
+                android:layout_centerInParent="true"
+                zhy:progress_text_size="35sp"
+                zhy:radius="46dp"/>
+
+            <TextView
+                android:id="@+id/user_order_tv_minus"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_toLeftOf="@id/order_progress_out"
+                android:layout_marginRight="14dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/score_minus"/>
+
+            <TextView
+                android:id="@+id/user_order_tv_plus"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_toRightOf="@id/order_progress_out"
+                android:layout_marginLeft="14dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/score_plus_disable"/>
+
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:id="@+id/order_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:text="@string/give_score"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/order_progress_out"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#bdd8f6"
+            android:gravity="center_horizontal"
+            android:text="(*您的评分将成为评价专家的重要标准，不会被专家看到)"
+            android:layout_marginTop="17dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@id/order_tv"
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/id_user_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="150dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="top"
+        android:textColorHint="@color/third_text_color"
+        android:padding="5dp"
+        android:textSize="14sp"
+        android:hint="留下本次服务评价(不少于10个字)"
+        android:background="@drawable/shape_rect_top_round_white_bg"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/id_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/shape_light_btn"
+                android:paddingBottom="8dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="8dp"
+                android:text="取  消" />
+
+            <TextView
+                android:id="@+id/id_save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_rect_blue"
+                android:text="保  存"
+                android:textColor="@color/white"
+                android:paddingBottom="8dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="8dp"
+                android:layout_marginLeft="30dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

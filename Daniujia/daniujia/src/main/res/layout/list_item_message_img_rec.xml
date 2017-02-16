@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/id_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_gravity="center_horizontal"
+        android:text="11:00"
+        android:textSize="12sp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:visibility="gone"
+        android:background="@drawable/shape_rect_message_time"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        tools:ignore="UseCompoundDrawables">
+
+        <com.xiaojia.daniujia.ui.views.imageview.RoundedImageView
+            android:id="@+id/id_avatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_avatar_default"
+            android:contentDescription="@string/app_name"
+            app:riv_oval="true" />
+
+        <com.xiaojia.daniujia.ui.views.imageview.BubberImageView.BubbleImageView
+            android:id="@+id/id_content_message_image"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:siTriangleHeight="10dp"
+            app:siRadius="10dp"
+            android:scaleType="centerInside"
+            android:layout_marginTop="2dp"
+            android:layout_toLeftOf="@id/id_avatar"
+            app:siArrowPosition="left"
+            android:contentDescription="@string/app_name" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.xiaojia.daniujia"
+          xmlns:android="http://schemas.android.com/apk/res/android"
+          android:versionCode="21014"
+          android:versionName="3.0.0">
+
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.BODY_SENSORS"/>
+
+    <!-- JPush Start -->
+    <permission
+        android:name="com.xiaojia.daniujia.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature"/>
+
+    <uses-permission android:name="com.xiaojia.daniujia.permission.JPUSH_MESSAGE"/>
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+
+    <!-- JPush End -->
+    <application
+        android:name=".base.App"
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@android:style/Theme.Light.NoTitleBar">
+
+        <activity
+            android:name=".ui.act.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="com.xiaojia.daniujia"/>
+            </intent-filter>
+        </activity>
+        <!-- ShareSDK BEGIN -->
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <!--
+            	AuthorizeAdapter表示一个继承自cn.sharesdk.framework.authorize.AuthorizeAdapter
+            	的类，这个类可以监听到页面的生命周期，也可以获取授权页面的各种UI控件。
+            	开发者可以通过继承AuthorizeAdapter，重写其方法，并获取各种UI来自定义这个页面的行为。
+            -->
+            <meta-data
+                android:name="AuthorizeAdapter"
+                android:value="cn.sharesdk.demo.MyAdapter"/>
+
+            <!--
+            	QZoneWebShareAdapter表示一个继承自cn.sharesdk.tencent.qzone.QZoneWebShareAdapter
+            	的类，这个类可以监听到页面的生命周期，也可以获QQ空间网页分享权页面的各种UI控件。
+            	开发者可以通过继承QZoneWebShareAdapter，重写其方法，并获取各种UI来自定义这个页面的行为。
+            <meta-data android:name="QZoneWebShareAdapter" android:value="cn.sharesdk.demo.MyQZoneWebShareAdapter" />
+            <meta-data android:name="QQWebShareAdapter" android:value="cn.sharesdk.demo.MyQQWebShareAdapter" />
+            -->
+
+            <!--
+            	Dropbox的SSO功能需要在此处添加一个对ACTION_VIEW事件的过滤器，其中的scheme是
+            	“db-”前缀再开发者应用的加上appKey。如果此过滤器不设置，则不能完成SSO功能授权
+            -->
+            <intent-filter>
+                <data android:scheme="db-b0f2ee521d86"/>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+
+            <intent-filter>
+                <data android:scheme="tencent100371282"/>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+
+            <!-- 调用新浪原生SDK，需要注册的回调activity -->
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <!-- 微信分享回调 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <!-- ShareSDK END -->
+        <!-- 支付宝sdk -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <!-- 支付宝sdk END -->
+        <!-- 微信支付 -->
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- END -->
+        <!-- 友盟统计 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5660fa69e0f55aee35007bfe"/>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Umeng"/>
+        <!-- END -->
+        <activity
+            android:name=".ui.act.ActSetting"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.act.ActQuestion"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name=".ui.act.ActEntrepreneurshipGuide"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.act.AllIndustryAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.act.WaitPhoneActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.act.ActGraphicOrderDetail"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".ui.act.ActNetPhoneOrderDetail"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".ui.act.ActOfflineOrderDetail"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".ui.act.ActFirstStepToBeExpert"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.act.ActApplyExpertComplete"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.act.ActProfileEdited"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize"/>
+        <activity
+            android:name=".ui.act.ActThirdStepToBeExpert"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name=".ui.act.ActSecondStepToBeExpert"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name=".ui.act.ActNMExpert"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name=".ui.act.ActFourthStepToBeExpert"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name=".ui.act.ActFifthStepToBeExpert"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name=".ui.act.ActAccount"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name=".ui.act.ActAddWorkExperience"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name=".ui.act.ActAddEduBackground"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name=".ui.act.AboutDnjActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.act.IntroduceActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.act.WebActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
+        <!-- IM -->
+        <activity
+            android:name=".ui.act.TwoButtonDialogActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent"/>
+        <activity
+            android:name=".ui.act.ActConversation"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.act.ImagePreActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.Translucent"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.act.IncomeExpensesActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.act.ActChat"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.act.ActMain"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="true"/>
+        <activity
+            android:name=".ui.act.ActToBeExpert"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.act.ActExpertHome"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.act.ActUserComment"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.act.ActIndustry"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.act.ActUserOrderDetail"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.act.ActExpertOrderDetail"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.act.ActExpertSearch"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible|adjustResize"/>
+        <activity
+            android:name=".ui.act.ActHelp"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.act.ActCoupon"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.act.ActForgetPwd"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.act.ActMyExpert"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.act.ActExpertCenter"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.act.ActExpertOrder"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.act.ActCollectMe"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.act.ActChangeUserLabel"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:name=".ui.act.ActRejectOrder"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity
+            android:name=".ui.act.ActExpertReply"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:name=".ui.act.ActPayDetail"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data android:scheme="wx69225f4cc12e6f3f"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.act.ActUserOrderComment"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:name=".ui.act.ActBalance"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:name=".ui.act.ActDeposit"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:name=".ui.act.ActExpertVisit"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:name=".ui.act.ActUserHome"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:name=".ui.act.ActExpertWorkExperience"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:name=".ui.act.ActExpertEducationBackground"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:name=".ui.act.ActExpertModifyInfo"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:name=".ui.act.ActExpertServiceSetting"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:name=".ui.act.ActSelectCity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:name=".ui.act.ActUserBasic"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:name=".ui.act.ActSelectDirection"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:name=".ui.act.ActCompleteDirection"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:name=".ui.act.ActExpertDirection"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:name=".ui.act.ActLogin"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.act.ActRegister"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.act.ChangePwdActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.act.PersonInfoBindActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".children.ChildrenShareWebActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.act.ActCommitSuccess"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.act.ActAskRewardRule"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ask.AskRewardWebActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.act.ActLookForExpert"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+
+        <activity
+            android:name=".ui.act.ActAskQuestion"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+
+        <activity
+            android:name=".ui.act.ActTransmitList"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name=".ui.act.ActFilePreView"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name=".ui.act.ActRequirementPublish"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name=".ui.act.ActUserRequirement"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name=".ui.act.ActRequirePayDetail"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name=".ui.act.ActPublishInstruction"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.Translucent"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name=".ui.act.ActSpeechSearch"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name=".ui.act.ActLookForExpertByCondition"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"></activity>
+
+
+        <activity
+            android:name=".ui.act.ActMyCommentToConsultant"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ui.act.ActRequirementDetail"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ui.act.ActChatFilePreView"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name=".ui.act.ActContactUs"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"></activity>
+
+        <!--测试activity  begin-->
+        <activity
+            android:name=".ui.act.ActTest"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.act.RecordTestActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <!--测试activity  end-->
+
+        <provider
+            android:name=".provider.DaniujiaProvider"
+            android:authorities="com.xiaojia.daniujia"
+            android:exported="false"
+            android:label="Daniujia Provider"/>
+
+        <!-- service -->
+        <service android:name=".mqtt.service.MqttService"/>
+
+        <!-- JPush Start -->
+        <!-- Required SDK核⼼心功能 -->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.xiaojia.daniujia"/>
+            </intent-filter>
+        </activity>
+        <!-- Required SDK核⼼心功能 -->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false"/>
+        <!-- Required SDK 核⼼心功能 -->
+        <!-- option since 2.0.5 可配置android:process 参数将PushService设置为独⽴立进程 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER"/>
+                <action android:name="cn.jpush.android.intent.REPORT"/>
+                <action android:name="cn.jpush.android.intent.PushService"/>
+                <action android:name="cn.jpush.android.intent.PUSH_TIME"/>
+            </intent-filter>
+        </service>
+
+        <!-- Required SDK 核⼼心功能 since 1.8.0 -->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService"/>
+
+                <category android:name="com.xiaojia.daniujia"/>
+            </intent-filter>
+        </service>
+        <!-- Required SDK核⼼心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY"/>
+                <!-- Required 显示通知栏 -->
+                <category android:name="com.xiaojia.daniujia"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <!-- Required SDK核⼼心功能 -->
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver"/>
+        <!-- User defined. ⽤用户⾃自定义的⼲⼴广播接收器 -->
+        <receiver
+            android:name=".receiver.JPushReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION"/>
+                <!-- Required ⽤用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.UNREGISTRATION"/>
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED"/>
+                <!-- Required ⽤用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED"/>
+                <!-- Required ⽤用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED"/>
+                <!-- Required ⽤用户打开⾃自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK"/>
+                <!-- Optional ⽤用户接受Rich Push Javascript 回调函数的intent -->
+                <action android:name="cn.jpush.android.intent.CONNECTION"/>
+                <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.xiaojia.daniujia"/>
+            </intent-filter>
+        </receiver>
+        <!-- Required . Enable it you can get statistics data with channel -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-release"/>
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="a9aabe6db79c7d80d84bd9ac"/>
+        <!-- JPush End -->
+
+        <!-- Tencent WebView meta data -->
+        <meta-data
+            android:name="QBSDKAppKey"
+            android:value="dxpdfnPm6XV+oZU+BsllORdp"/>
+
+
+        <!-- 讯飞移动统计分析 -->
+        <meta-data
+            android:name="IFLYTEK_APPKEY"
+            android:value="'58525166'"/>
+        <meta-data
+            android:name="IFLYTEK_CHANNEL"
+            android:value="Android_Demo"/>
+
+    </application>
+
+</manifest>

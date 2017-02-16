@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/coupon_bg_valid">
+    
+    <LinearLayout
+        android:id="@+id/coupon_rl_one_part"
+        android:layout_width="90dp"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/money_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥"
+                android:paddingTop="3dp"
+                android:textSize="14sp"
+                android:textColor="@color/red_collection" />
+
+            <TextView
+                android:id="@+id/coupon_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:textColor="@color/red_collection"
+                android:textSize="25sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/coupon_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/money_tag"
+            android:layout_marginTop="6dp"
+            android:text="@string/coupon_type"
+            android:textColor="@color/red_collection"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_toRightOf="@id/coupon_rl_one_part"
+        android:layout_marginLeft="17dp">
+
+        <TextView
+            android:id="@+id/coupon_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/coupon_app"
+            android:textColor="@color/first_text_color"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/validity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="12sp"
+            android:textColor="@color/third_text_color" />
+
+    </LinearLayout>
+
+    <com.xiaojia.daniujia.ui.views.RotateTextView
+        android:id="@+id/remainder_days"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:gravity="center"
+        android:text="@string/reminder_days"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:textColor="@color/blue_text"
+        android:textSize="10sp"/>
+
+
+</LinearLayout>

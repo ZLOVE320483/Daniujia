@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/common_content_bg">
+
+    <RelativeLayout
+        android:id="@+id/publish_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar_height"
+        android:background="@color/common_top_bar_bg">
+
+        <ImageView
+            android:id="@+id/iv_title_back"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerInside"
+            android:src="@drawable/bg_title_back">
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="需求发布"
+            android:textColor="@color/first_text_color"
+            android:textSize="17sp"
+            />
+
+        <TextView
+            android:id="@+id/requirement_publish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:padding="3dp"
+            android:text="发布说明"
+            android:textColor="@color/blue_text"
+            android:textSize="17sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/common_line_color"/>
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:id="@+id/publish_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/confirm"
+        android:layout_below="@id/publish_title"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/require_ll_tip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_pc_tip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/publish_require_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/pc_tip"
+                    android:drawablePadding="7dp"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="12dp"
+                    android:paddingTop="12dp"
+                    android:text="PC端填写更便捷 www.daniujia.com"/>
+
+                <ImageView
+                    android:id="@+id/require_delete_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:padding="5dp"
+                    android:src="@drawable/delete_white"/>
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/publish_require_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="顾问名称"/>
+
+            <EditText
+                android:id="@+id/adviser_name"
+                style="@style/publish_require_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="比如法律顾问，技术顾问等"/>
+
+            <TextView
+                style="@style/publish_require_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="顾问费用预算"/>
+
+            <EditText
+                android:id="@+id/adviser_budget"
+                style="@style/publish_require_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="有大致的预算，专家意愿度更高"/>
+
+            <TextView
+                style="@style/publish_require_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="需求描述"/>
+
+            <com.xiaojia.daniujia.ui.views.StillScrollEditText
+                android:id="@+id/requirement_desc"
+                style="@style/publish_require_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:adjustViewBounds="true"
+                android:gravity="left|top"
+                android:hint="@string/input_require_desc"
+                android:inputType="textMultiLine"
+                android:lines="7"/>
+
+            <TextView
+                style="@style/publish_require_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="到现场服务说明"/>
+
+            <EditText
+                android:id="@+id/be_present_instruction"
+                style="@style/publish_require_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="估计要专家到现场服务的天数"/>
+
+            <TextView
+                style="@style/publish_require_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="服务期"/>
+
+            <RelativeLayout
+                android:id="@+id/server_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/server_time_tv"
+                    style="@style/publish_require_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:text="3-6个月"/>
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="8dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="24dp"
+                    android:src="@drawable/demand_drop_down"/>
+
+            </RelativeLayout>
+
+            <TextView
+                style="@style/publish_require_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发布者名称"/>
+
+            <EditText
+                android:id="@+id/publish_name"
+                style="@style/publish_require_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="公司名称（用于显示，可以匿名）"/>
+
+            <TextView
+                style="@style/publish_require_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="所在城市"/>
+
+            <EditText
+                android:id="@+id/choose_city"
+                style="@style/publish_require_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="选择城市"/>
+
+            <TextView
+                style="@style/publish_require_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="需求截止日期"/>
+
+            <EditText
+                android:id="@+id/publish_date"
+                style="@style/publish_require_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:hint="选择日期"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/confirm"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/blue_text"
+        android:text="提 交"
+        android:textColor="@color/white"
+        android:textSize="16sp"/>
+
+
+</RelativeLayout>

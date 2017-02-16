@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/id_confirm"
+        android:scrollbars="none"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/id_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/reward_answers_close"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:text="悬赏问答规则"
+                android:textColor="@color/blue_text"
+                android:textSize="25dp"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/background_img_rule"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/app_name"
+                    android:layout_marginTop="6dp"
+                    android:src="@drawable/ic_point" />
+
+                <com.xiaojia.daniujia.ui.views.SplitTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:lineSpacingMultiplier="1.2"
+                    android:text="发布悬赏问题，需要注册成为大牛家的用户，并且填写过基本用户信息（包括姓名，公司，职位）。 "
+                    android:textColor="@color/second_text_color"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/app_name"
+                    android:layout_marginTop="6dp"
+                    android:src="@drawable/ic_point" />
+
+                <com.xiaojia.daniujia.ui.views.SplitTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:lineSpacingMultiplier="1.2"
+                    android:text="由于悬赏问题定位在企业运营过程中比较重要的问题，所以最低悬赏费用为100元，您可以根据问题重要性自行设置。  "
+                    android:textColor="@color/second_text_color"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/app_name"
+                    android:layout_marginTop="6dp"
+                    android:src="@drawable/ic_point" />
+
+                <com.xiaojia.daniujia.ui.views.SplitTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:lineSpacingMultiplier="1.2"
+                    android:text="发布者发布的悬赏问答截止时间默认为正式发布后的十五天时间，到达截止时间后，悬赏费用将给到获得点赞次数最多的专家，若有点赞次数同样的回答 ，将共同分享此笔悬赏费用。"
+                    android:textColor="@color/second_text_color"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/app_name"
+                    android:layout_marginTop="6dp"
+                    android:src="@drawable/ic_point" />
+
+                <com.xiaojia.daniujia.ui.views.SplitTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:lineSpacingMultiplier="1.2"
+                    android:text="为了保证回答质量，只有大牛家的认证专家或者已经提交成为专家资料的用户才可以回答发布的悬赏问题。"
+                    android:textColor="@color/second_text_color"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/app_name"
+                    android:layout_marginTop="6dp"
+                    android:src="@drawable/ic_point" />
+
+                <com.xiaojia.daniujia.ui.views.SplitTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:lineSpacingMultiplier="1.2"
+                    android:text="用户查看悬赏问题的回答，需要支付悬赏金1%的费用，费用将在1小时后给到该回答的专家。 支付过此费用的用户可以对回答进行查看和好评。用户若对专家的回答不满意，可以在支付查看费用1小时内要求退款（每日最多3次）。"
+                    android:textColor="@color/second_text_color"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/app_name"
+                    android:layout_marginTop="6dp"
+                    android:src="@drawable/ic_point" />
+
+                <com.xiaojia.daniujia.ui.views.SplitTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:lineSpacingMultiplier="1.2"
+                    android:text="悬赏问答截止后，用户仍然可以支付费用查看该悬赏问题的回答以及给于好评。"
+                    android:textColor="@color/second_text_color"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/app_name"
+                    android:layout_marginTop="6dp"
+                    android:src="@drawable/ic_point" />
+
+                <com.xiaojia.daniujia.ui.views.SplitTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:lineSpacingMultiplier="1.2"
+                    android:text="若悬赏问题到达截止时间，仍没有任何专家回答，悬赏费用将按原支付路径退回。"
+                    android:textColor="@color/second_text_color"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/app_name"
+                    android:layout_marginTop="6dp"
+                    android:src="@drawable/ic_point" />
+
+                <com.xiaojia.daniujia.ui.views.SplitTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:lineSpacingMultiplier="1.2"
+                    android:text="对于悬赏问答中产生的交易，大牛家将收取15%手续费。"
+                    android:textColor="@color/second_text_color"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/id_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:text="知道了"
+        android:textColor="@color/white"
+        android:background="@color/blue_text"
+        android:textSize="16sp"/>
+
+</RelativeLayout>

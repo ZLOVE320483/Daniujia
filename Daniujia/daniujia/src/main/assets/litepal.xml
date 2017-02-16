@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<litepal>
+    
+    <dbname value = "daniujia"/>
+    
+    <version value="12"/>
+    <list>
+        <mapping class="com.xiaojia.daniujia.domain.ChatRecord"/>
+        <mapping class="com.xiaojia.daniujia.domain.ChatDetail"/>
+    </list>
+</litepal>

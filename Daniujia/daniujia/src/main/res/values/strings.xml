@@ -1,0 +1,655 @@
+<resources>
+
+    <string name="app_name">大牛家</string>
+    <string name="app_id">58525166</string>
+
+    <string name="message">消息</string>
+    <string name="question">提问</string>
+    <string name="account">我</string>
+    <string name="click_once_more_exit">再按一次退出</string>
+    <string name="resend">重新发送</string>
+    <string name="main_tab_home">首页</string>
+
+
+    <string name="consult_title">约谈顾问</string>
+    <string name="loading">加载中...</string>
+
+    <string name="question_title">提问</string>
+    <string name="submit">提交</string>
+    <string name="entrepreneurship_guide">创业指导</string>
+    <string name="input_question_desc">请尽可能说明具体问题，并对问题的背景有所介绍，让专家能够快速理解您的问题</string>
+    <string name="input_require_desc">说明您对于顾问的明确要求，并介绍公司或者项目的需求背景</string>
+
+    <string name="account_title">我</string>
+    <string name="account_balance">当前余额</string>
+    <string name="my_wallet">我的钱包</string>
+    <string name="my_question">我的提问</string>
+    <string name="care_field">关注领域</string>
+    <string name="store">收藏</string>
+    <string name="consult_order">约谈订单</string>
+    <string name="be_consultant">成为顾问</string>
+    <string name="recharge">充值</string>
+    <string name="deposit">提现</string>
+    <string name="income_expenses_detail">余额明细</string>
+    <string name="account_recharge">账户充值</string>
+    <string name="money">金额</string>
+    <string name="input_money">输入金额</string>
+    <string name="all">全部</string>
+    <string name="unfinished">未完成</string>
+    <string name="finished">已完成</string>
+    <string name="order_detail">订单详情</string>
+    <string name="total">共：</string>
+    <string name="q_a_mana">问答整理</string>
+    <string name="personal_main_page">个人主页</string>
+    <string name="my_order">我的订单</string>
+    <string name="consult_service">约谈服务</string>
+    <string name="user_name">用户名：</string>
+    <string name="edit">编辑</string>
+    <string name="add_q_a">添加问答</string>
+    <string name="input_q_a_title">请输入问题标题...</string>
+    <string name="input_q_a_content">请输入问题内容...</string>
+    <string name="edit_q_a">编辑问答</string>
+    <string name="e_person_profile">个人简介</string>
+    <string name="buy_qa">已购买的回答</string>
+
+    <!--<string name="x_coupons">%s张优惠券</string>-->
+
+    <!-- ExpertConsultServiceActivity -->
+    <string name="open">开启</string>
+    <string name="user_comments">用户评价</string>
+    <string name="consult_record">约谈记录</string>
+    <string name="rmb_by_cnt">￥%s/次</string>
+    <string name="rmb_by_minute">￥%s/分钟</string>
+    <string name="rmb_by_hour">￥%s/小时</string>
+
+    <!-- LoginActivity -->
+    <string name="username">手机号/用户名</string>
+    <string name="password">密码</string>
+    <string name="input_password">请输入密码</string>
+    <string name="normal_user">普通用户</string>
+    <string name="login_failed">登录失败</string>
+    <string name="login_illeagal">用户名或密码不能为空</string>
+    <string name="user_register">用户注册</string>
+    <string name="forget_pwd">忘记密码</string>
+    <string name="third_login">使用社交账号登录</string>
+
+    <!-- RegVercodeActivity/RegisterActivity -->
+    <string name="input_phone_no">请输入手机号</string>
+    <string name="phone_format_error">手机号格式不正确</string>
+    <string name="get_ver_code">获取验证码</string>
+    <string name="resend_ver_code">重发验证码</string>
+    <string name="input_ver_code">输入验证码</string>
+    <string name="wrong_no">手机号或验证不能为空</string>
+    <string name="next">下一步</string>
+    <string name="agree">同意</string>
+    <string name="dnj_disclaimer">大牛家服务协议</string>
+    <string name="input_pwd">密码</string>
+    <string name="pwd_not_same">两次输入密码不一致</string>
+    <string name="finish_register">完成</string>
+
+
+    <!-- NewQuestionActivity -->
+    <string name="unsolved">待解决</string>
+    <string name="satisfied">已满意</string>
+    <string name="willing_to_answer">愿意回答</string>
+    <string name="satisfied_answers">满意回答</string>
+    <string name="instry_belong">所属行业：%s</string>
+    <string name="cmp_scale">公司规模：%s</string>
+    <string name="answer">接听</string>
+    <string name="good_experts">好评专家</string>
+    <string name="serve_experts">服务专家</string>
+    <string name="tag_answer">答</string>
+
+    <!-- QaArrangedActivity -->
+    <string name="unissued">未发布</string>
+    <string name="issued">已发布</string>
+
+    <string name="input_title">请输入标题</string>
+    <string name="input_ques_des">请输入问题描述</string>
+    <string name="answer_summary">答案概要(可选 ,30字以内)</string>
+    <string name="input_answer">请输入答案</string>
+    <string name="qa_charge">查看费用：</string>
+    <string name="qa_charge_unit">元</string>
+    <string name="qa_issue">发   布</string>
+
+
+    <!-- ConsultSearchActivity -->
+    <string name="input_expert_name">输入姓名或关键字查找</string>
+    <string name="input_keywords">输入关键字</string>
+    <string name="cancel">取消</string>
+    <string name="all_kinds">全部分类</string>
+    <string name="all_industry">所有行业</string>
+    <string name="latest_choose">最近选择</string>
+    <string name="clear_records">清空搜索记录</string>
+    <string name="hint_expert_search">输入姓名或者行业名称、关键字搜索专家</string>
+    <string name="hot_label">热门搜索</string>
+    <string name="recent_search">最近搜索</string>
+    <string name="no_history_record">暂时没有搜索记录</string>
+
+
+    <string name="search_expert_position">输入行业、专长或其他关键字</string>
+
+    <!-- ConsultSortsActivity -->
+    <string name="sort">分类</string>
+
+    <!-- KBContentActivity/KBQuestionDetailActivity -->
+    <string name="define">定义</string>
+    <string name="core_points">核心要点</string>
+    <string name="operate_advice">操作建议</string>
+    <string name="think_about_points_below">需要考虑以下几点：</string>
+    <string name="relative_quesitons">相关问题</string>
+    <string name="come_from">来源：</string>
+    <string name="quizzer">提问者：</string>
+    <string name="helpful">有帮助</string>
+    <string name="unknown">未知</string>
+    <string name="suggestion">意见</string>
+    <string name="input_some_suggestion">写几句宝贵的提议吧...</string>
+    <string name="consult_detail">约谈详情</string>
+    <string name="answerer">回答者：</string>
+    <string name="link">链接</string>
+
+    <!-- ExpertDetailActivity -->
+    <string name="person_home_page">个人主页</string>
+    <string name="serve">服务：</string>
+    <string name="mobile_consult_time">电话约谈：</string>
+    <string name="hour">%s小时</string>
+    <string name="count">%s次</string>
+    <string name="profile">资料</string>
+    <string name="questions_and_answers">问答</string>
+    <string name="graphics_consult">图文约谈</string>
+    <string name="offline_consult">线下约谈</string>
+    <string name="network_chat">网络通话</string>
+    <string name="consult_no_service">服务暂停,稍后开通</string>
+    <string name="consult_field">约谈方向</string>
+    <string name="person_bg">个人背景</string>
+    <string name="work_experience">工作经历</string>
+    <string name="edu_background">教育背景</string>
+    <string name="per_count">元/次</string>
+    <string name="per_hour">%s元/小时</string>
+    <string name="per_minute">%s元/分钟</string>
+    <string name="per_count_rmb">%s/次</string>
+    <string name="per_hour_rmb">%s/时</string>
+    <string name="per_minute_rmb">%s/分钟</string>
+    <string name="bachelor">学士</string>
+    <string name="master">硕士</string>
+    <string name="phd">博士</string>
+    <string name="other">其他</string>
+    <string name="per_cnt">/次</string>
+    <string name="per_h">/小时</string>
+    <string name="per_m">/分钟</string>
+    <string name="per_price">￥%s</string>
+    <string name="user_comment">用户评价 (%s)</string>
+    <string name="serve_cnt">服务次数：%s</string>
+    <string name="average">平均：%s</string>
+    <string name="input_consult_content">写明你要约谈的内容</string>
+    <string name="buy">购买</string>
+    <string name="buy_graphic_consult">购买图文约谈</string>
+    <string name="buy_net_consult">购买网络通话</string>
+    <string name="buy_offline_consult">购买线下约谈</string>
+    <string name="network_chat_note">注：每次约谈时间至少10分钟，不足10分钟按10分钟计算。</string>
+
+    <!-- SettingActivity -->
+    <string name="setting">设置</string>
+    <string name="change_pwd">更改密码</string>
+    <string name="version">版本</string>
+    <string name="secret_policy">隐私相关</string>
+    <string name="user_agreement">用户协议</string>
+    <string name="logout">退出登录</string>
+
+    <!-- AccountActivity -->
+    <string name="person_profile">个人资料</string>
+    <string name="name">姓名</string>
+    <string name="input_real_name">填写真实姓名</string>
+    <string name="belong_company">所在公司</string>
+    <string name="input_current_cmp">目前公司</string>
+    <string name="position">职位</string>
+    <string name="input_current_position">目前职位</string>
+    <string name="profession">行业</string>
+    <string name="scale">规模</string>
+    <string name="optional_info">可选填信息</string>
+    <string name="birthday">出生日期</string>
+    <string name="gender">性别</string>
+    <string name="not_filled">未填写</string>
+    <string name="male">男</string>
+    <string name="female">女</string>
+    <string name="industry_choose">行业选择</string>
+    <string name="company_scale">公司规模</string>
+    <string name="address">地点</string>
+    <string name="confirm">确定</string>
+    <string name="closed">已关闭</string>
+
+    <!-- ConcernFieldActivity -->
+    <string name="concern_field">关注领域</string>
+    <string name="add_field">添加领域</string>
+    <string name="choose_care_fields">选择关注领域</string>
+    <string name="save">保存</string>
+
+    <!-- FavorActivity -->
+    <string name="favor_consultant">约谈顾问</string>
+    <string name="favor_knowledge">知识</string>
+
+    <!-- BeConsultantActivity -->
+    <string name="photo_not_null">请选择头像</string>
+    <string name="name_not_null">请填写姓名</string>
+    <string name="cmpName_not_null">请填写公司名称</string>
+    <string name="position_not_null">请填写当前职位</string>
+    <string name="choose_industry">请选择所属行业</string>
+    <string name="choose_scale">请选择公司规模</string>
+    <string name="choose_posi">请选择所在地点</string>
+    <string name="profile_not_null">请填写个人简介</string>
+    <string name="consultant_require">顾问要求</string>
+    <string name="how_to_link">如何连接</string>
+    <string name="about_fee">关于付费</string>
+    <string name="apply_step">申请步骤</string>
+    <string name="real_name">真实姓名</string>
+    <string name="cmp_name">公司名称</string>
+    <string name="e_profile">简介</string>
+    <string name="complete_profile">资料完善</string>
+    <string name="personal_experiences">个人的职业经历以及专业发展</string>
+    <string name="my_consult_field_num_notify">我的约谈方向数量：</string>
+    <string name="my_consult_field_total_num">/3</string>
+    <string name="add_consult_field">添加方向</string>
+    <string name="consult_serve_type">约谈服务设置</string>
+    <string name="choose_your_field">选择你的专长</string>
+    <string name="input_experences">填写经验</string>
+    <string name="input_experence_detail">请说明您在这方面的经验</string>
+    <string name="apply_success">申请成功</string>
+    <string name="apply_success_notify">已收到您提交的信息和认证资料,我们会在两个工作日内与您电话联系确认！</string>
+    <string name="contact_time">联系您的时间</string>
+    <string name="delete">删除</string>
+    <string name="add_consult_field_first">成为顾问，至少需要添加一个约谈方向</string>
+    <string name="already_reach_most_fields">每位专家最多能添加3个约谈方向</string>
+    <string name="adjustment">调整</string>
+    <string name="graphic_consult_detail">利用应用的即时通信功能，发送图片和文字等内容来解决用户问题。</string>
+    <string name="net_chat_consult_detail">利用回拨电话的功能，让专家和用户可以通话，且不显示彼此号码*每次通话至少10分钟，不足10分钟按10分钟计算*</string>
+    <string name="offline_consult_detail">用户和专家在线上商议好见面时间和地点，专家通过面谈的方式解决用户的问题。</string>
+    <string name="service_type">服务类别：</string>
+    <string name="fee">费用</string>
+    <string name="rmb_per_count">（元/次）</string>
+    <string name="rmb_per_minute">（元/分钟）</string>
+    <string name="rmb_per_hour">（元/小时）</string>
+    <string name="x_rmb_per_count">￥%s/次</string>
+    <string name="x_rmb_per_minute">￥%s/分钟</string>
+    <string name="x_rmb_per_hour">￥%s/小时</string>
+    <string name="price">价格</string>
+    <string name="pay_success">支付成功</string>
+
+    <!-- Expert -->
+    <string name="edit_profile">简介编辑</string>
+    <string name="input_profile">给自己俸细微的介绍吧</string>
+    <string name="edu_detail">教育背景详情</string>
+    <string name="work_detail">工作详情</string>
+    <string name="input_cmp_name">请输入公司全称</string>
+    <string name="input_position">所在公司职位</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="input_date">填写日期</string>
+    <string name="position_status">在职状态</string>
+    <string name="position_start_time">入职时间</string>
+    <string name="position_leave_time">离职时间</string>
+    <string name="not_necessary">非必填</string>
+    <string name="city">所在城市</string>
+    <string name="current_address">目前所在地</string>
+    <string name="position_desc">职务描述</string>
+    <string name="input_content">输入内容...</string>
+    <string name="edit_work_experience">工作经历编辑</string>
+    <string name="add_work_experience">添加工作经历</string>
+    <string name="edit_edu_experience">教育经历编辑</string>
+    <string name="add_edu_experience">添加教育经历</string>
+    <string name="edu_bg_detail">教育背景详情</string>
+    <string name="school_name">院校名称</string>
+    <string name="school_year_start">入学年份</string>
+    <string name="school_year_end">毕业年份</string>
+    <string name="degree">学位</string>
+    <string name="major">专业</string>
+    <string name="input_school_name">输入院校名称</string>
+    <string name="input_school_year_start">输入入学年份</string>
+    <string name="input_school_year_end">输入毕业年份</string>
+    <string name="input_degree">输入学位</string>
+    <string name="input_major">输入专业</string>
+    <string name="wait_to_confirm">待确认</string>
+    <string name="confimed">已确认</string>
+    <string name="canceled">已取消</string>
+    <string name="_minutes">%s分钟</string>
+    <string name="_hours">%s小时</string>
+    <string name="service_setting">服务设置</string>
+    <string name="input_price">输入价格</string>
+    <string name="serve_type">服务类型</string>
+    <string name="note_change_price_reason">说明调整原因</string>
+    <string name="some_note">相关说明</string>
+    <string name="_order_no">订单号：</string>
+    <string name="_date">日期：</string>
+    <string name="_consult">约谈：</string>
+    <string name="_status">状态：</string>
+    <string name="_comment">评价：</string>
+    <string name="lookup_detail">查看详情</string>
+    <string name="_chat_time_len">通话时长：</string>
+    <string name="_already_chat_time">已通话：</string>
+    <string name="_consult_time">约谈时间</string>
+
+    <!-- CouponActivity -->
+    <string name="look_up_history_coupons">查看历史用券</string>
+    <string name="look_up_valid_coupons">查看有效券</string>
+    <string name="have_no_coupon">您还没有有效的优惠券！</string>
+
+    <!-- Deposit -->
+    <string name="alipayAcc_not_null">请输入支付宝账户</string>
+    <string name="receiverName_not_null">请输入收款人姓名</string>
+    <string name="money_not_null">请输入提现金额</string>
+    <string name="bankName_not_null">请输入银行开户名</string>
+    <string name="cardNO_not_null">请输入银行卡号</string>
+    <string name="bank_not_null">请输入开户行名称</string>
+
+    <!-- others -->
+    <string name="search_history">搜索历史</string>
+    <string name="rel_knowledge">相关知识点</string>
+    <string name="rel_question">相关问题</string>
+    <string name="i_want_to_answer">我要回答</string>
+    <string name="choose_avatar">选择头像</string>
+    <string name="choose_from_album">从相册选择</string>
+    <string name="take_photo">拍照</string>
+    <string name="switch_industry">切换行业</string>
+    <string name="no_data_now">暂无数据</string>
+    <string name="have_favored">已收藏</string>
+    <string name="have_deleted_favor">已取消收藏</string>
+    <string name="favor_failed">收藏失败</string>
+    <string name="del_favor_failed">取消收藏失败</string>
+    <string name="buy_time_len">购买时间</string>
+    <string name="buy_num">购买次数</string>
+    <string name="consult_time_len">约谈时间</string>
+    <string name="one_hour">1小时</string>
+    <string name="two_hour">2小时</string>
+    <string name="recommend_experts">推荐专家</string>
+    <string name="register_success">注册成功，请登录</string>
+    <string name="phone_consult">电话约谈</string>
+    <string name="have_phone_time_len">已通话：%s分钟</string>
+    <string name="minute_count">分钟数：%s分钟</string>
+    <string name="hour_count">小时数：%s小时</string>
+    <string name="num_count">次数：%s次</string>
+    <string name="question_desc">问题描述</string>
+    <string name="order_no">订单号：</string>
+    <string name="order_date">日期：</string>
+    <string name="service_comment">服务评价</string>
+    <string name="input_comment">留下本次服务评价(不少于10个字)</string>
+    <string name="order_confirm">确认完成</string>
+    <string name="order_cancel">取消订单</string>
+    <string name="reference_example">参考示例</string>
+    <string name="canceled_orders">已取消的订单</string>
+    <string name="total_x_minutes">共%s分钟 </string>
+    <string name="total_x_nums">共%s次 </string>
+    <string name="total_x_hours">共%s小时</string>
+    <string name="_total">合计：</string>
+    <string name="close">关闭</string>
+    <string name="not_login">未登录</string>
+    <string name="profile_update_success">资料更新成功!</string>
+    <string name="sign_star">*</string>
+    <string name="nothing">暂无</string>
+    <string name="so_far">至今</string>
+    <string name="consult_time_money" formatted="false">约谈%s分钟  %s元</string>
+    <string name="pay_detail">支付详情</string>
+    <string name="yuan">%s元</string>
+    <string name="none">无</string>
+    <string name="buy_success_x_x" formatted="false">您已成功购买 %s 的 %s</string>
+    <string name="warm_prompt">温馨提示</string>
+    <string name="deposit_success">您的申请我们会尽快操作，如果提现账号错误，提现款项将退回您的账户，请您检查后重新申请提现!</string>
+    <string name="income">收入</string>
+    <string name="expense">支出</string>
+    <string name="consult_x_minutes">约谈%s分钟</string>
+    <string name="consult_x_hours">约谈%s小时</string>
+    <string name="today">今天</string>
+    <string name="yesterday">昨天</string>
+    <string name="the_day_before_yesterday">前天</string>
+    <string name="your_willingness_have_delivered">您的意愿已传达!</string>
+    <string name="please_choose_time_to_contact_you">请选择联系您的时间</string>
+    <string name="input_old_pwd">请输入原密码</string>
+    <string name="input_new_pwd">请输入新密码</string>
+    <string name="twice_pwd_not_equal">两次输入密码不一致</string>
+    <string name="pwd_change_success">密码修改成功</string>
+    <string name="change_price_apply_is_received">您修改价格的申请我们已收到，我们会在2个工作日以内与您联系</string>
+    <string name="buy_success">购买成功</string>
+    <string name="chat_history">聊天历史记录</string>
+    <string name="history">历史记录</string>
+    <string name="call_immediately">立即拔打</string>
+    <string name="help_feedback">帮助与反馈</string>
+    <string name="about_dnj">关于大牛家</string>
+    <string name="connect_us">联系我们</string>
+    <string name="order_canceled">您的订单已取消成功，我们会尽快联系您</string>
+    <string name="delete_this_q_a">确定要删除此条问答吗？</string>
+    <string name="click_to_load_more">点击载入更多</string>
+    <string name="pull_to_refresh_pull_label">松开刷新</string>
+    <string name="pull_to_refresh_footer_release_label">松开后加载</string>
+    <string name="pull_to_refresh_refreshing_label">刷新\u2026</string>
+    <string name="pull_to_refresh_footer_pull_label">上拉加载更多</string>
+    <string name="pull_to_refresh_footer_refreshing_label">加载中\u2026</string>
+    <string name="pull_to_refresh_refresh_lasttime">最近更新</string>
+    <string name="no_more">已全部加载完成</string>
+    <string name="will_cancel_order">确定要取消订单吗？</string>
+    <string name="most_transfer_money">最多可转%s元</string>
+    <string name="update_password">更改密码</string>
+    <string name="clear_cache">清理缓存</string>
+    <string name="develop_test">开发使用,测试忽略</string>
+    <string name="export_db">导出数据库</string>
+    <string name="conversation">会话</string>
+    <string name="home_frag">首页</string>
+    <string name="chat">聊天</string>
+    <string name="reminder_days">剩余3天</string>
+
+    <!-- IM -->
+    <string name="send_msg">发送</string>
+    <string name="call">拨打</string>
+    <string name="answer_call">接听</string>
+    <string name="hang_up">挂断</string>
+    <string name="speaker">免提</string>
+    <string name="camer">拍照选取</string>
+    <string name="album">图库选取</string>
+    <string name="buy_chat">点击购买</string>
+    <string name="phone_call">网络通话</string>
+    <string name="call_time">顾问主动拨打</string>
+    <string name="msg_read">已读</string>
+    <string name="click_to_classify">点击分类</string>
+    <string name="press_to_talk">"按住 说话"</string>
+    <string name="attach_pic">照片</string>
+    <string name="attach_take">拍照</string>
+    <string name="push_to_audio_error">未知错误，稍后重试&#8230;</string>
+    <string name="no_sdcard">储存卡已拔出，录音功能暂不能使用</string>
+    <string name="record_time_low">录音时间太短！</string>
+    <string name="click_to_question_detail">查看问题详情 ></string>
+    <string name="your_comment">您的评价:</string>
+
+    <!-- XListView -->
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">释放更新</string>
+    <string name="xlistview_header_hint_loading">加载中...</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+
+    <!-- MQTT -->
+    <string name="connectedto">Connected to </string>
+    <string name="disconnected">Disconnected from</string>
+    <string name="no_status">Unknown connection status to</string>
+    <string name="connecting">Connecting</string>
+    <string name="disconnecting">Disconnecting from</string>
+    <string name="connectionError">An error occurred connecting to</string>
+    <string name="connection_lost">%1$s has lost connection to %2$s</string>
+    <string name="notification">%1$s has received %2$s on topic %3$s</string>
+    <string name="notifyTitle_connectionLost">MQTT Client Has Lost Connection</string>
+    <string name="messageRecieved">Received message %1$s &lt;br/&gt; &lt;small&gt;Topic: %2$s &lt;/small&gt; </string>
+    <string name="notifyTitle">MQTT Message Received</string>
+    <string name="dateFormat">dd/MM/yy \'at\' HH:mm:ss</string>
+    <string name="timestamp">&lt;br/&gt; &lt;small&gt; %1$s &lt;/small&gt;</string>
+    <string name="system">系统消息</string>
+    <string name="multiport">您的账号已在其他设备登录,请注意账号安全</string>
+    <string name="relogin">重新登录</string>
+    <string name="exit">退出</string>
+    <string name="open_net">打开网络</string>
+    <string name="conn_timeout">连接超时</string>
+    <string name="conn_fail">连接失败</string>
+
+    <!-- PasswordReset -->
+    <string name="register_phone_num">注册的手机号码</string>
+    <string name="msg_verify_code">验证码</string>
+    <string name="password_rule">密码长度要6-14位</string>
+    <string name="new_password">新密码</string>
+    <string name="new_password_confirm">确认新密码</string>
+    <string name="complete">完&#160;&#160;&#160;成</string>
+
+    <!-- ChangePwd -->
+    <string name="old_password">旧密码</string>
+    <string name="change_pwd_tip">您是通过第三方账号登录，还未设置密码</string>
+    <string name="your_phone">您的手机号：</string>
+    <string name="service_set">约谈服务方式</string>
+    <string name="serviceSet">服务设置</string>
+    <string name="share">分享App给朋友</string>
+    <string name="share_title">大牛家-为企业对接专家</string>
+    <string name="share_content">如果您在工作中遇到无法解决的问题，就来大牛家提问吧</string>
+    <string name="share_imgurl">https://dn-daniujia.qbox.me/logo_blod.jpg</string>
+    <string name="share_url">https://daniujia.com</string>
+
+    <!-- 事件消息 -->
+    <string name="order_request_profession">用户提出约谈，正在等待您的确认</string>
+    <string name="order_request_normal">约谈已提交给专家，正在等待专家确认</string>
+    <string name="order_confirm_profession">已确认订单，等待用户支付</string>
+    <string name="order_confirm_normal">专家已确认约谈，赶紧去支付吧</string>
+    <string name="order_paid_profession">用户已支付，约谈开始</string>
+    <string name="order_paid_normal">支付成功，可以给专家发送消息啦</string>
+    <string name="order_cancel_profession">用户已取消约谈</string>
+    <string name="order_cancel_normal">已取消约谈</string>
+    <string name="order_reject_profession">拒绝用户约谈</string>
+    <string name="order_reject_normal">专家已拒绝您的约谈</string>
+    <string name="order_resolve_profession">约谈已结束，等待用户评价</string>
+    <string name="order_resolve_normal">约谈已结束，快去评价吧</string>
+    <string name="order_evaluate_profession">用户已评价消息，快去回复吧</string>
+    <string name="order_evaluate_normal">您已评价成功</string>
+    <string name="order_reply_profession">已回复用户评价</string>
+    <string name="order_reply_normal">专家回复您的评价啦</string>
+
+    <!-- Expert Home -->
+    <string name="industry_experience">行业经历</string>
+    <string name="service_way">服务方式</string>
+    <string name="expert_service_text_unit">/次</string>
+    <string name="expert_service_call_unit">/分钟</string>
+    <string name="expert_service_offline_unit">/小时</string>
+    <string name="no_comment">暂时没有评论哦~</string>
+    <string name="stop_service">暂停服务</string>
+    <string name="person_label">个人标签</string>
+
+    <!-- Conversation -->
+    <string name="i_want_to_ask">我要提问</string>
+    <string name="give_score">评分</string>
+    <!-- Me -->
+    <string name="login_now">立即登录</string>
+    <string name="expert_center">专家管理中心</string>
+    <string name="expert_order">专家服务订单</string>
+    <string name="my_expert">我约的专家</string>
+    <string name="my_collection">我的收藏</string>
+    <string name="my_requirement">我的顾问需求</string>
+    <string name="coupon">优惠券</string>
+    <string name="pay_for_ask">悬赏问答</string>
+    <string name="coupon_type">[直接抵扣]</string>
+    <string name="coupon_app">大牛家优惠券</string>
+    <string name="to_be_expert">成为专家</string>
+    <string name="help">帮助</string>
+    <string name="use_help">使用帮助</string>
+    <string name="collect_me">收藏我</string>
+    <string name="balance">余额</string>
+    <string name="balance_detail">余额明细</string>
+    <string name="today_visit">今日访问页面</string>
+    <string name="expert_manager_function">管理功能</string>
+    <string name="name_call">专家</string>
+
+    <!-- login register -->
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="login_space">登&#160;&#160;&#160;录</string>
+    <string name="register_phone">手机号</string>
+    <string name="input_username">用户名(4-14位,可使用字母、数字等)</string>
+    <string name="input_re_pwd">确认密码</string>
+    <string name="complete_register">完成注册</string>
+
+    <!--order -->
+    <string name="order_num">订单编号:</string>
+    <string name="create_time">创建时间:</string>
+    <string name="remarks">备注：有关订单中任何问题,您可以直接与大牛家客服进行交流,也可以拨打我们的电话：4000903022</string>
+    <string name="interview">约谈相关</string>
+    <!--account-->
+    <string name="search_all_expert">全部专家</string>
+    <string name="workAge">工作年限</string>
+    <string name="industry_function">行业与职能</string>
+    <string name="label">标签</string>
+    <string name="no_label">您的标签还未编辑</string>
+    <string name="common_label">常用标签</string>
+    <string name="know">知道了</string>
+    <string name="test">备注</string>
+    <string name="account_evaluate">用户评价:</string>
+    <string name="base_info">基本信息</string>
+    <string name="add_label">添加</string>
+    <string name="hint_edit_label">编辑标签</string>
+    <string name="why">·  可以为更多人解决工作中的问题；\n·  能在最大程度上发挥您的专业价值；\n·  更能够获得一定的回报收入，大牛家的每位专家都有一个初始服务价格（图文约谈100元/次，电话约谈10元/分钟，线下约谈1000元/小时），专家提供一次好评服务后，即可根据个人情况，修改自己的服务价格。</string>
+    <string name="how">只要您具备10年以上工作经验, 完善个人的相关信息，包括基本资料，擅长方向，个人简介，通过大牛家审核后即可成为大牛家的专家。</string>
+    <string name="why_tobe_expert">为什么要成为大牛家的专家 ?</string>
+    <string name="account_profile">这里是个人简介,用户可以在这里进行个人编辑,保留编辑格式,能在网页端客户端很好的显示</string>
+    <string name="account_profile_new">您多年工作经验的总结，便于用户快速了解您的专业积累。参考示例如下：\n我是王书春，毕业于哈尔滨工程大学，18年家电行业工作经验。1998年大学毕业即加入海尔集团，一直工作至今，从事过设计、研发、管理等多个岗位的工作，现任海尔集团开放式创新业务总监。\n\n我对家电行业有着深刻的了解，精通新产品企划及开发流程；熟悉冰箱、冷柜、洗衣机、空调、热水器、厨电等相关技术及技术发展趋势；总结了一套技术创新的方法论，并在工作中不断完善提高；独创的《减振洗衣机及洗衣机减振方法》获得国家专利。
+</string>
+    <string name="be_consult_success">  很高兴收到您成为专家的申请, \n我们会尽快审核您提交的材料,给到您回复！</string>
+    <string name="add_work_hint">这里是工作经历的详情介绍</string>
+    <string name="input_account_desc">对自己的个人情况做一下介绍,让专家能够快速对您有一个了解,便于专家更有针对性的回答您的问题</string>
+
+
+    <string name="pull_to_refresh_from_bottom_pull_label">下拉刷新</string>
+    <string name="pull_to_refresh_from_bottom_release_label">放开以刷新…</string>
+    <string name="pull_to_refresh_from_bottom_refreshing_label">正在载入…</string>
+
+    <string name="qr_code_text">大牛家二维码名片</string>
+    <string name="long_click_message">长按上方名片保存</string>
+
+    <string name="knowledge_share_title">知识“童”享助学活动</string>
+    <string name="knowledge_share_content">大牛家正在与平台上的专家一起，对安徽省金寨县沙堰小学的学生们进行公益助学活动。成为专家之后，您也一起来参与吧。</string>
+    <string name="knowledge_share_tip_title">您现在还不是我们的认证专家,填写资料成为我们的认证专家即可参与知识“童”享助学活动。</string>
+    <string name="no_handler_for_this_type_of_file">未找到应用程序</string>
+
+    <string name="refund_tip">若您最终对约谈不满意，可要求退款。任何疑问可直接与大牛家客服进行交流，也可拨打客服电话4000903022与我们联系</string>
+
+    <string name="recruit_expert">招募专家</string>
+
+    <string name="confirm_consultant_tip">相信您与该专家已进行深入沟通，并对其有了比较全面的了解。在确定前，请填写您对此专家的评价。</string>
+    <string name="requirement_has_payed_desc">发布者为此需求支付的费用（1000元/位），由大牛家平台进行托管，在发布者确定顾问后，将支付给此顾问，作为顾问费用预付款。</string>
+    <string name="requirement_service_duration_desc">合作顾问需要为发布方服务的大致期限。</string>
+    <string name="publish">发布</string>
+    <string name="require_description">寻找法律顾问，为公司各类合同提供咨询，优化，修改意见。
+        为各类合同纠纷提供指导性的解决方案，保障企业合法利益。提高企业法律方面的整体意识，有利于企业得到较为全面的法律保护。更好的实现企业的蓬勃发展</string>
+    <string name="cancel_sign_up_tip">取消报名后，对此寻找顾问需求今天不能再次报名，确定要取消吗？</string>
+    <string name="edit_expert_info_tip">您现在还不是大牛家认证专家，成为专家以后即可报名，是否现在去填写认证资料？</string>
+    <string name="sign_up_tip">报名成功后，发布者即可通过大牛家随时与您联系，是否现在报名？</string>
+    <string name="sign_up_success_tip">您已报名成功，由于您提交的成为专家资料正在审核中，审核通过后，您的报名信息将会通知给此需求发布者。</string>
+    <string name="call_phone_tip">大牛家正在使用回拨电话功能拨打您的电话，请注意接听。您接听后，系统将即刻拨打对方电话，对方接通后，你们即可通话。</string>
+    <string name="sign_up_checking_tip">您已报名成功，由于您提交的成为专家资料正在审核中，审核通过后，您的报名信息将会通知给此需求发布者。</string>
+    <string name="about_dnj_content">「大牛家」是一个为企业对接行业专家的咨询服务平台，这里汇聚了各行业各领域的资深行业专家，通过大牛家平台，专家可以为企业决策者提供专业意见，也可以成为企业的顾问，为企业具体事务提供指导或者咨询服务。</string>
+    <string name="requirement_shut_down_tip_phone">由于需求已关闭，如您仍需与专家进行通话，请至该专家主页购买其电话约谈服务后，等待专家通过大牛家回拨电话联系你。</string>
+    <string name="requirement_shut_down_tip_txt">由于需求已关闭，如您仍需与专家图文聊天，请至该专家主页购买其图文约谈服务后与之进行沟通。</string>
+
+    <string name="guide_bold_one">
+        发布顾问需求，找到专业顾问
+    </string>
+
+    <string name="guide_one">
+        发布顾问需求，与报名专家及时沟通 确定最合适的顾问
+    </string>
+
+    <string name="guide_bold_two">
+        与资深顾问约谈，获取专业意见
+    </string>
+
+    <string name="guide_two">
+        选择合适的专家，购买约谈服务，即可与专家约谈，获取专业意见
+    </string>
+
+    <string name="guide_bold_three">
+        成为认证专家，服务更多需要企业
+    </string>
+
+    <string name="guide_three">
+        提交资料成为认证专家，服务更多需要企业，最大化专业价值
+    </string>
+
+</resources>

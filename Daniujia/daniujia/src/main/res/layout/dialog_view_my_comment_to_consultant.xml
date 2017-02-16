@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/shape_rect_white_bg">
+
+    <LinearLayout
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/shape_rect_white_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/id_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/first_text_color"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:layout_marginTop="22dp"/>
+        
+        <EditText
+            android:id="@+id/id_content"
+            android:layout_width="match_parent"
+            android:background="@drawable/shape_rect_white_bg"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:textColor="@color/first_text_color"
+            android:textColorHint="@color/third_text_color"
+            android:hint="请给予专家可观评价，至少10个字"
+            android:textSize="14sp"
+            android:gravity="top"
+            android:padding="10dp"
+            android:layout_height="100dp"/>
+
+        <View
+            android:background="@color/separate"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_divider"
+            android:layout_marginTop="12dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/id_cancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:textColor="@color/third_text_color"
+                android:text="暂不评价"/>
+
+            <View
+                android:id="@+id/id_divider_1"
+                android:background="@color/separate"
+                android:layout_width="@dimen/list_divider"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/id_confirm"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:textColor="@color/blue_text"
+                android:text="确定评价"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

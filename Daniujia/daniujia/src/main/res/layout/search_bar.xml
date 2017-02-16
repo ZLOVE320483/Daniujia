@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/top_bar_height"
+    android:background="@color/white" >
+
+    <TextView
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/common_space"
+        android:text="@string/cancel"
+        android:textColor="@color/third_text_color"
+        android:textSize="15sp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/search_bg"
+        android:orientation="horizontal"
+        android:layout_toLeftOf="@id/close" >
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/search"
+            android:layout_gravity="center_vertical" />
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="@string/input_keywords"
+            android:imeOptions="actionSearch"
+            android:singleLine="true"
+            android:textColorHint="@color/light_grey"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/clear"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/selector_clear_btn" />
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/common_line_color" />
+
+</RelativeLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="12dp"
+        android:src="@drawable/demand_consultant_reference"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="28dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/id_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:lineSpacingExtra="3sp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/first_text_color"
+            android:text="@string/refund_tip"/>
+
+        <TextView
+            android:id="@+id/id_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2016-11-11"
+            android:layout_marginTop="12dp"
+            android:textSize="12sp"
+            android:textColor="@color/third_text_color"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_divider"
+            android:layout_alignLeft="@+id/id_time"
+            android:layout_marginTop="15dp"
+            android:src="@color/separate"
+            android:layout_below="@+id/id_time"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/common_content_bg"
+              android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="35dp">
+
+                <TextView
+                    android:id="@+id/search_content_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="未找到有关'哈哈哈'方面的专家"
+                    android:textColor="@color/second_text_color"
+                    android:textSize="15sp"/>
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="@dimen/list_divider"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"
+                    android:layout_toLeftOf="@+id/search_content_tip"
+                    android:src="@color/separate"/>
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="@dimen/list_divider"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@+id/search_content_tip"
+                    android:src="@color/separate"/>
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/id_user_request"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/shape_rect_top_round_white_bg"
+                android:gravity="top"
+                android:hint="描述您的具体要求，我们将有专人与您联系"
+                android:paddingBottom="15dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="15dp"
+                android:textColorHint="@color/third_text_color"
+                android:textSize="15sp"/>
+
+            <EditText
+                android:id="@+id/id_user_phone"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/shape_rect_top_round_white_bg"
+                android:hint="请输入手机号"
+                android:inputType="phone"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:textColorHint="@color/third_text_color"
+                android:visibility="gone"
+                android:textSize="15sp"/>
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/shape_rect_blue"
+                android:text="提  交"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/common_content_bg">
+
+    <include layout="@layout/common_top_bar"/>
+
+    <View
+        android:id="@+id/id_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_divider"
+        android:layout_marginTop="45dp"
+        android:background="@color/common_line_color"/>
+
+    <Button
+        android:id="@+id/commit"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/blue_text"
+        android:text="提 交"
+        android:textColor="@color/white"
+        android:textSize="16sp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/commit"
+        android:layout_below="@+id/id_line"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/id_line_top_one"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_divider"
+                android:layout_marginTop="10dp"
+                android:background="@color/separate"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingBottom="13dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="12dp">
+
+                <com.xiaojia.daniujia.ui.views.CircleImageView
+                    android:id="@+id/contact_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_launcher"/>
+
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_toRightOf="@id/contact_image"
+                    android:drawableLeft="@drawable/email"
+                    android:drawablePadding="12dp"
+                    android:text="service@daniujia.com"
+                    android:textColor="@color/first_text_color"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/telephone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/email"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/contact_image"
+                    android:drawableLeft="@drawable/telephone"
+                    android:drawablePadding="12dp"
+                    android:text="021-20772988"
+                    android:textColor="@color/first_text_color"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/email"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@+id/telephone"
+                    android:text="  (工作日 10:00-19:00)"
+                    android:textColor="@color/second_text_color"
+                    android:textSize="12sp"
+                    />
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/telephone"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/contact_image"
+                    android:drawableLeft="@drawable/address"
+                    android:drawablePadding="12dp"
+                    android:text="上海市浦东新区耀华支路39弄9号"
+                    android:textColor="@color/first_text_color"
+                    android:textSize="14sp"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_divider"
+                android:background="@color/separate"/>
+
+            <View
+                android:id="@+id/id_line_top_two"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_divider"
+                android:layout_marginTop="10dp"
+                android:background="@color/separate"/>
+
+            <com.xiaojia.daniujia.ui.views.StillScrollEditText
+                android:id="@+id/contact_suggestion"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:adjustViewBounds="true"
+                android:background="@color/white"
+                android:gravity="left|top"
+                android:hint="您的意见和建议"
+                android:inputType="textMultiLine"
+                android:lineSpacingExtra="3dp"
+                android:lines="7"
+                android:paddingBottom="15dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="15dp"
+                android:text=""
+                android:textColor="@color/first_text_color"
+                android:textColorHint="@color/third_text_color"
+                android:textSize="15sp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_divider"
+                android:background="@color/separate"/>
+
+            <View
+                android:id="@+id/id_line_top_three"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_divider"
+                android:layout_marginTop="10dp"
+                android:background="@color/separate"/>
+
+            <LinearLayout
+                android:id="@+id/contact_ll_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="92dp"
+                    android:layout_height="wrap_content"
+                    android:text="电话"
+                    android:textColor="@color/second_text_color"
+                    android:textSize="15sp"/>
+
+                <EditText
+                    android:id="@+id/contact_et_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:hint="您的联系方式"
+                    android:inputType="phone"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="15dp"
+                    android:textColor="@color/first_text_color"
+                    android:textColorHint="@color/third_text_color"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

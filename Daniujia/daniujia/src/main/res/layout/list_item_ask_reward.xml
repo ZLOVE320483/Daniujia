@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <TextView
+                android:id="@+id/price_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="悬赏:"
+                android:textSize="13sp"
+                android:textColor="@color/second_text_color"/>
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/common_orange"
+                android:textSize="15sp"
+                android:text="￥2000"
+                android:layout_toRightOf="@+id/price_tag"
+                android:layout_marginLeft="5dp"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"/>
+
+            <ImageView
+                android:id="@+id/safe_verify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/price"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/safe_green"/>
+
+            <ImageView
+                android:id="@+id/ask_verify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ask_verify"/>
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/ask_verify"
+                android:layout_marginRight="5dp"
+                android:text="用户A"
+                android:layout_centerVertical="true"
+                android:textSize="13sp"
+                android:textColor="@color/second_text_color"/>
+        </RelativeLayout>
+
+        <com.xiaojia.daniujia.ui.views.MoreLineTextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:textColor="@color/first_text_color"
+            android:textSize="19sp"
+            android:lineSpacingExtra="6dp"
+            android:text="@string/add_work_hint"/>
+
+        <com.xiaojia.daniujia.ui.views.MoreLineTextView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="12dp"
+            android:paddingLeft="12dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/account_profile"
+            android:textSize="16sp"
+            android:textColor="@color/first_text_color"
+            android:lineSpacingExtra="6dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <TextView
+                android:id="@+id/answer_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/third_text_color"
+                android:textSize="13sp"
+                android:text="回答 0"/>
+
+            <TextView
+                android:id="@+id/follow_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/answer_count"
+                android:textColor="@color/third_text_color"
+                android:textSize="13sp"
+                android:layout_marginLeft="8dp"
+                android:text="关注 0"/>
+
+            <TextView
+                android:id="@+id/left_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/follow_count"
+                android:textColor="@color/third_text_color"
+                android:textSize="13sp"
+                android:layout_marginLeft="8dp"
+                android:text="剩余天数 2天"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

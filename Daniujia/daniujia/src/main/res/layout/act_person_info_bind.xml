@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_content_bg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/layout_title"
+        layout="@layout/layout_common_title_bar" />
+
+    <include layout="@layout/common_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_common_grey_border"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_bind_phone"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/transparent"
+            android:drawableLeft="@drawable/ic_account"
+            android:drawablePadding="9dp"
+            android:hint="@string/input_phone_no"
+            android:inputType="phone"
+            android:paddingLeft="14dp"
+            android:textColorHint="@color/third_text_color"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_divider"
+            android:layout_marginLeft="14dp"
+            android:contentDescription="@string/app_name"
+            android:src="@color/separate" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:paddingLeft="14dp"
+            android:paddingRight="10dp">
+
+            <EditText
+                android:id="@+id/et_bind_verifycode"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:drawableLeft="@drawable/ic_verify_code"
+                android:drawablePadding="9dp"
+                android:hint="@string/input_ver_code"
+                android:textColorHint="@color/third_text_color"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btn_bind_vercode"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/shape_common_grey_solid"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:text="@string/get_ver_code"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/user_name_pwd_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_divider"
+                android:layout_marginLeft="14dp"
+                android:contentDescription="@string/app_name"
+                android:src="@color/separate" />
+
+            <EditText
+                android:id="@+id/et_bind_username"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/transparent"
+                android:drawableLeft="@drawable/ic_user_name"
+                android:drawablePadding="9dp"
+                android:hint="用户名（4-14位，可使用字母、数字等）"
+                android:paddingLeft="14dp"
+                android:textColorHint="@color/third_text_color"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_divider"
+                android:layout_marginLeft="14dp"
+                android:contentDescription="@string/app_name"
+                android:src="@color/separate" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="14dp"
+                android:paddingRight="10dp">
+
+                <EditText
+                    android:id="@+id/id_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/show_pwd"
+                    android:background="@android:color/transparent"
+                    android:drawableLeft="@drawable/ic_password"
+                    android:drawablePadding="9dp"
+                    android:hint="密码（6-14位字符）"
+                    android:inputType="textPassword"
+                    android:textColor="@color/first_text_color"
+                    android:textColorHint="@color/third_text_color"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/show_pwd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/app_name"
+                    android:padding="10dp"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_hide_pwd" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_bind_complete"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/selector_blue_btn"
+        android:text="@string/complete"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+</LinearLayout>

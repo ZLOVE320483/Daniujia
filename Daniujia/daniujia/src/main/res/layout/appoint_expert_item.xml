@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@drawable/shape_rect_top_round_white_bg"
+    android:layout_width="match_parent"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.xiaojia.daniujia.ui.views.imageview.RoundedImageView
+        android:id="@+id/expert_header"
+        android:src="@drawable/ic_launcher"
+        android:layout_width="35dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="12dp"
+        android:layout_height="35dp" />
+    <TextView
+        android:id="@+id/expert_name"
+        android:layout_below="@+id/expert_header"
+        android:text="吴晶"
+        android:layout_marginLeft="15dp"
+        android:textSize="11sp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/second_text_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/position"
+        android:textColor="@color/second_text_color"
+        android:textSize="11sp"
+        android:text="产品经理*上海小家网络有限公司"
+        android:layout_toRightOf="@+id/expert_header"
+        android:layout_marginTop="14dp"
+        android:layout_marginLeft="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/text_unit"
+        android:textSize="12sp"
+        android:textColor="@color/second_text_color"
+        android:layout_marginRight="10dp"
+        android:text="@string/per_count"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_alignParentRight="true"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/price"
+        android:textColor="@color/red_collection"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="3dp"
+        android:layout_toLeftOf="@+id/text_unit"
+        android:textSize="16sp"
+        android:text="10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/consult_type"
+        android:textColor="@color/first_text_color"
+        android:text="@string/graphics_consult"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="44dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/time"
+        android:text="14分钟"
+        android:layout_below="@+id/price"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:textSize="12sp"
+        android:textColor="@color/second_text_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/unit"
+        android:text="@string/qa_charge_unit"
+        android:textColor="@color/second_text_color"
+        android:textSize="12sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/expert_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/total_money"
+        android:textSize="16sp"
+        android:text="10"
+        android:textColor="@color/red_collection"
+        android:layout_toLeftOf="@+id/unit"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="64dp"
+        android:layout_marginRight="5dp"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/total"
+        android:text="@string/_total"
+        android:layout_toLeftOf="@+id/total_money"
+        android:textColor="@color/second_text_color"
+        android:textSize="12sp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/expert_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/state"
+        android:textSize="12sp"
+        android:textColor="@color/second_text_color"
+        android:text="待支付"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/consult_type"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

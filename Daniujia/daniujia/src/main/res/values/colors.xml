@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="screen_bg">@color/white</color>
+    <color name="bordercolor">@color/darkgray</color>
+    <color name="transparent">#00000000</color>
+    <color name="darkgray">#666</color>
+    <color name="chat_box_border">#BBB</color>
+    <color name="chat_box_bg">#EEE</color>
+    <color name="search_bg">#eeeeee</color>
+    <color name="green">#22AA22</color>
+    <color name="selector">#55000000</color>
+
+    <color name="separate">#ebebeb</color>
+    <color name="white">#ffffff</color>
+    <color name="semi_white">#ddffffff</color>
+    <color name="black">#000000</color>
+    <color name="grey">#919392</color>
+    <color name="red_collection">#ff4b00</color>
+
+    <color name="light_grey">#bfc0c0</color>
+    <color name="lighter_grey">#d6d6d6</color>
+    <color name="light_blue">#54acf0</color>
+    <color name="theme_blue">#2c90de</color>
+    <color name="theme_red">#e76040</color>
+    <color name="bg_grey">#ecf1f4</color>
+    <color name="grey_darker">#8a8b8c</color>
+    <color name="grey_darkest">#717273</color>
+    <color name="grey_black">#555656</color>
+    <color name="horizontal_split_line">#dddddd</color>
+    <color name="province_line_border">#c7c7c7</color>
+    
+    <color name="footer_bg">#cccccc</color>
+    <color name="header_bg">#cccccc</color>
+    
+    <color name="red">#FF0000</color>
+    <color name="gray">#808080</color>
+    
+    <!-- commone use -->
+   	<color name="main_bg_cocolr">#edf1f4</color>
+   	  <color name="title_bg">#f8f8f8</color>
+   	  
+   	<color name="first_text_color">#333333</color>
+   	<color name="second_text_color">#888888</color>
+   	<color name="pic_select">#22000000</color>
+    <color name="third_text_color">#bfbfbf</color>
+    <color name="forth_text_color">#999999</color>
+    <color name="four_text_color">#666666</color>
+    <color name="five_text_color">#999999</color>
+    <color name="blue_text">#2594e9</color>
+    <color name="common_line_color">#dfdfdf</color>
+
+    <color name="btn_enable">#2594e9</color>
+    <color name="btn_unenable">#bfbfbf</color>
+    <color name="btn_pressed">#2185d1</color>
+
+    <color name="bg_emo">#f4f5f5</color>
+    <color name="title_color">#000000</color>
+    <color name="user_label_bg">#fef6ce</color>
+    <color name="user_label_border">#ead483</color>
+
+    <!-- Common Color -->
+    <color name="common_content_bg">#eeeeee</color>
+    <color name="common_cancel_bg">#e6e6e6</color>
+    <color name="common_confirm_border">#1770b4</color>
+    <color name="common_top_bar_bg">#fafafa</color>
+    <color name="common_message_event_border">#89b6e0</color>
+    <color name="common_message_event_content_bg">#d7ebfe</color>
+    <color name="common_message_event_text_color">#2594e9</color>
+    <color name="common_green">#00cc99</color>
+    <color name="common_grey">#c4cdd4</color>
+    <color name="common_purple">#818cf5</color>
+    <color name="common_orange">#ff6d00</color>
+
+    <color name="order_state_color_finished">#4caf50</color>
+    <color name="order_state_color_doing">#2594e9</color>
+    <color name="order_state_color_wait">#fb8c00</color>
+    <color name="order_state_color_cancel">#b0bec5</color>
+    <color name="corner_bg">#f5f5f5</color>
+
+    <color name="bg_pc_tip">#fffbd6</color>
+
+    <color name="order_has_read_color">#f6f7f7</color>
+
+    <drawable name="red_collection">#ff4b00</drawable>
+    <drawable name="white">#ffffff</drawable>
+    <drawable name="default_img_bg">#e8e8e8</drawable>
+
+
+
+</resources>

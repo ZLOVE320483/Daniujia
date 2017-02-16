@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="wrap_content"
+        android:layout_height="430dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/act_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_name"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:scaleType="fitXY"
+            android:layout_centerInParent="true"
+            android:src="@drawable/alert_pic" />
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_close_act" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

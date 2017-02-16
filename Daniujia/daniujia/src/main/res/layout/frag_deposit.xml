@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_content_bg">
+
+    <include layout="@layout/common_top_bar"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_divider"
+        android:src="@color/common_line_color"
+        android:contentDescription="@string/app_name"/>
+
+    <com.xiaojia.daniujia.ui.views.PagerSlidingTabStrip
+        android:id="@+id/tab_head"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@android:color/white"
+        app:pstsDividerColor="@android:color/transparent"
+        app:pstsIndicatorColor="@color/blue_text"
+        app:pstsIndicatorHeight="1dp"
+        app:pstsShouldExpand="true"
+        app:pstsTabBackground="@drawable/background_tab"
+        app:pstsUnderlineColor="@android:color/white"
+        app:pstsUnderlineHeight="1dp"
+        app:selectedTabTextColor="@color/blue_text" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_divider"
+        android:src="@color/separate"
+        android:contentDescription="@string/app_name"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white" />
+
+</LinearLayout>

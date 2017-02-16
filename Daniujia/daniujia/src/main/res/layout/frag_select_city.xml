@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_content_bg">
+
+    <include layout="@layout/common_top_bar"/>
+
+    <include layout="@layout/common_line"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.xiaojia.daniujia.ui.views.PinnedSectionListView
+            android:id="@+id/id_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@color/transparent"
+            android:listSelector="@color/transparent"/>
+
+        <com.xiaojia.daniujia.ui.views.AlphaBetIndexerBar
+            android:id="@+id/id_alphabet_indexer"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"/>
+    </RelativeLayout>
+
+</LinearLayout>

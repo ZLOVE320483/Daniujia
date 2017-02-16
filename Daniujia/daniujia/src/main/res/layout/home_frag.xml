@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_top_bar_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/search_container"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/expert_search_bg">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/search" />
+
+        <TextView
+            android:id="@+id/et_search"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@null"
+            android:layout_marginRight="50dp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="28dp"
+            android:layout_centerVertical="true"
+            android:text="@string/search_expert_position"
+            android:singleLine="true"
+            android:textColor="@color/third_text_color"
+            android:textSize="12sp"/>
+
+        <ImageView
+            android:id="@+id/speech_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:padding="8dp"
+            android:src="@drawable/voice_black"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:layout_marginTop="7dp"
+        android:background="@color/third_text_color" />
+
+    <com.xiaojia.daniujia.ui.views.PinnedSectionListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@null"
+        android:listSelector="@android:color/transparent"
+        android:overScrollMode="never"
+        android:scrollbarStyle="outsideOverlay" />
+</LinearLayout>

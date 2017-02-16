@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:background="@drawable/shape_rect_white_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="@drawable/shape_rect_white_bg">
+
+        <ImageView
+            android:id="@+id/title_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="13dp"
+            android:src="@drawable/ic_question_blue" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="11dp"
+            android:layout_toRightOf="@+id/title_iv"
+            android:text="@string/my_question"
+            android:textColor="@color/first_text_color"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:padding="10dp"
+            android:src="@drawable/close" />
+
+        <View
+            android:id="@+id/separate"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_divider"
+            android:layout_below="@+id/close"
+            android:layout_marginTop="3dp"
+            android:background="@color/separate" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:layout_above="@+id/confirm"
+            android:layout_below="@+id/separate"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="left|top"
+                    android:layout_margin="10dp"
+                    android:inputType="textMultiLine"
+                    android:lineSpacingExtra="3dp"
+                    android:autoLink="phone"
+                    android:textColorLink="@color/third_text_color"
+                    android:textColor="@color/second_text_color"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/confirm"
+            android:layout_width="75dp"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/shape_rect_blue"
+            android:text="@string/know"
+            android:textColor="@color/selector_txt_white_blue"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/edit"
+            android:layout_width="75dp"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@+id/confirm"
+            android:background="@color/white"
+            android:text="@string/cancel"
+            android:visibility="gone"
+            android:textColor="@color/blue_text"
+            android:textSize="14sp" />
+    </RelativeLayout>
+</RelativeLayout>

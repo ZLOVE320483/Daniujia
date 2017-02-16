@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+    <Button
+        android:id="@+id/right_now_do_it"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="85dp"
+        android:layout_marginLeft="89dp"
+        android:layout_marginRight="89dp"
+        android:background="@drawable/selector_blue_btn"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:text="立即体验"
+        android:textColor="@color/white"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/text_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/right_now_do_it"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginRight="44dp"
+        android:gravity="center"
+        android:lineSpacingExtra="4dp"
+        android:text="提交资料成为认证专家"
+        android:textColor="#afbbc5"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/text_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/text_two"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:text="提交资料成为认证专家"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="#5f5f5f"
+        android:textSize="21sp"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/guide_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/text_one"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="65dp"
+        android:src="@drawable/icon_guide_page_1"/>
+
+
+</RelativeLayout>

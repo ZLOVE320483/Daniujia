@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/id_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/shape_rect_message_time"
+        android:paddingBottom="3dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="3dp"
+        android:text="11:00"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        tools:ignore="UseCompoundDrawables">
+
+        <com.xiaojia.daniujia.ui.views.imageview.RoundedImageView
+            android:id="@+id/id_avatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_avatar_default"
+            app:riv_corner_radius="50dp"
+            app:riv_oval="true" />
+
+        <RelativeLayout
+            android:id="@+id/attach_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/img_chat_left">
+
+            <ImageView
+                android:id="@+id/attach_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/unknown_small"
+                android:contentDescription="@string/app_name"/>
+
+            <TextView
+                android:id="@+id/attach_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/attach_icon"
+                android:text="readme.txt"
+                android:layout_marginLeft="10dp"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:maxWidth="160dp"
+                android:textColor="@color/first_text_color"
+                android:layout_alignTop="@+id/attach_icon"/>
+
+            <TextView
+                android:id="@+id/attach_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/attach_icon"
+                android:text="3.2M"
+                android:layout_marginLeft="10dp"
+                android:textSize="14sp"
+                android:textColor="@color/second_text_color"
+                android:layout_alignRight="@+id/attach_name"
+                android:layout_alignBottom="@+id/attach_icon" />
+
+            <ImageView
+                android:id="@+id/id_divider_1"
+                android:layout_width="200dp"
+                android:layout_height="@dimen/list_divider"
+                android:layout_below="@+id/attach_icon"
+                android:src="@color/separate"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/attach_source"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/id_divider_1"
+                android:textColor="@color/third_text_color"
+                android:padding="5dp"
+                android:textSize="10sp"
+                android:drawableLeft="@drawable/document_source"
+                android:drawablePadding="3dp"
+                android:text="大牛家网站端"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

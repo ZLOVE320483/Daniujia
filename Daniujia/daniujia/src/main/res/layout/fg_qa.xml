@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_grey"
+    android:orientation="vertical" >
+
+    <com.xiaojia.daniujia.ui.views.SpaceIndicator
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/unsolve_txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/unsolved"
+            android:textColor="@color/blue_text" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/common_line_color" />
+
+        <TextView
+            android:id="@+id/satisfy_txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/satisfied"
+            android:textColor="@color/first_text_color" />
+    </com.xiaojia.daniujia.ui.views.SpaceIndicator>
+
+    <include layout="@layout/common_line" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_qa_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="296dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/shape_rect_white_grey">
+
+        <ImageView
+            android:id="@+id/update_version_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/bg_update_version_force"/>
+
+        <TextView
+            android:id="@+id/force_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#cfe2f9"
+            android:text="2.1.1"
+            android:layout_marginLeft="120dp"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            android:layout_marginTop="46dp"/>
+
+        <TextView
+            android:id="@+id/id_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/update_version_bg"
+            android:textColor="@color/first_text_color"
+            android:textSize="17sp"
+            android:text="升级到新版本"/>
+
+        <TextView
+            android:id="@+id/id_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/id_title"
+            android:layout_marginTop="25dp"
+            android:text="版本号:2.2.1"
+            android:textColor="@color/second_text_color"
+            android:textSize="14sp"
+            android:layout_marginLeft="15dp"/>
+
+        <TextView
+            android:id="@+id/id_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="25dp"
+            android:textColor="@color/first_text_color"
+            android:textSize="14sp"
+            android:text="@string/app_name"
+            android:layout_below="@+id/id_version"/>
+
+        <Button
+            android:id="@+id/force_update"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/id_content"
+            android:background="@color/blue_text"
+            android:text="立即更新"
+            android:textSize="17sp"
+            android:textColor="@color/white"/>
+
+        <LinearLayout
+            android:id="@+id/update_container"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/force_update"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_divider"
+                android:contentDescription="@string/app_name"
+                android:src="@color/separate"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/id_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:textColor="@color/third_text_color"
+                    android:textSize="17sp"
+                    android:text="暂不更新"/>
+
+                <ImageView
+                    android:layout_width="@dimen/list_divider"
+                    android:layout_height="match_parent"
+                    android:src="@color/separate"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <Button
+                    android:id="@+id/update"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:textColor="@color/blue_text"
+                    android:textSize="17sp"
+                    android:text="立即更新"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

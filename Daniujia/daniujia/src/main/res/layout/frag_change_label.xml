@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_content_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/common_top_bar_bg">
+
+        <ImageView
+            android:id="@+id/id_back"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="center"
+            android:src="@drawable/ic_back_grey" />
+
+        <TextView
+            android:id="@+id/id_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/first_text_color"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/id_save"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:text="@string/save"
+            android:layout_alignParentRight="true"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textColor="@color/second_text_color"/>
+
+    </RelativeLayout>
+
+    <include layout="@layout/common_line" />
+
+    <ScrollView
+        android:id="@+id/id_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_divider"
+                android:layout_marginTop="15dp"
+                android:contentDescription="@string/app_name"
+                android:src="@color/separate" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label"
+                    android:textColor="@color/first_text_color"
+                    android:layout_marginTop="15dp"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/id_no_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/no_label"
+                    android:textColor="@color/third_text_color"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="gone"
+                    android:textSize="14sp" />
+
+                <com.xiaojia.daniujia.ui.views.FlowLayout
+                    android:id="@+id/id_my_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_divider"
+                android:contentDescription="@string/app_name"
+                android:src="@color/separate" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/common_content_bg" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_height"
+                android:background="@color/separate" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/shape_common_grey_border">
+
+                    <EditText
+                        android:id="@+id/et_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@+id/id_add"
+                        android:background="@color/common_top_bar_bg"
+                        android:hint="@string/hint_edit_label"
+                        android:paddingLeft="5dp"
+                        android:textColor="@color/first_text_color"
+                        android:textColorHint="@color/third_text_color"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:id="@+id/id_add"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/shape_add_label"
+                        android:text="@string/add_label"
+                        android:textColor="@color/blue_text"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/common_label"
+                    android:textColor="@color/first_text_color"
+                    android:textSize="15sp" />
+
+                <com.xiaojia.daniujia.ui.views.FlowLayout
+                    android:id="@+id/id_common_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white"/>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_divider"
+                android:contentDescription="@string/app_name"
+                android:src="@color/separate" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

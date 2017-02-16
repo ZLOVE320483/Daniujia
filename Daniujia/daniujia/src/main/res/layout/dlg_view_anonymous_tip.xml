@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@drawable/shape_common_grey_border"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/shape_common_grey_border" >
+
+        <TextView
+            android:id="@+id/id_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提示"
+            android:layout_marginTop="23dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/first_text_color"
+            android:textSize="17sp"/>
+
+        <TextView
+            android:id="@+id/id_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/id_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="18dp"
+            android:textColor="@color/second_text_color"
+            android:layout_marginRight="18dp"
+            android:text="成为匿名专家，您上传的头像，填写的真实姓名和当前公司名称将不显示在专家个人主页上。"/>
+
+        <ImageView
+            android:id="@+id/id_divider_1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_divider"
+            android:src="@color/separate"
+            android:layout_below="@+id/id_content"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/confirm"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/id_divider_1"
+            android:text="知道了"
+            android:gravity="center"
+            android:textColor="@color/blue_text"
+            android:textSize="16sp"/>
+    </RelativeLayout>
+
+</RelativeLayout>

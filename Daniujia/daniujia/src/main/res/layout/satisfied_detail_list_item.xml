@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="10dp" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/rl_satisfied_ask"
+        android:layout_width="match_parent"
+        android:layout_height="70dp" >
+
+        <com.xiaojia.daniujia.ui.views.imageview.RoundedImageView
+            android:id="@+id/iv_satisfied_ask_head"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerInside"
+            app:riv_oval="true" />
+
+        <TextView
+            android:id="@+id/tv_satisfied_ask_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/iv_satisfied_ask_head"
+            android:textColor="@color/second_text_color" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_satisfied_ask_name"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/iv_satisfied_ask_head"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_satisfied_ask_industry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/second_text_color"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/shape_dot_grey"
+                android:contentDescription="@string/app_name" />
+
+            <TextView
+                android:id="@+id/tv_satisfied_ask_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/second_text_color"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_satisfied_ask_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/third_text_color"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <include 
+        android:id="@+id/layout_line"
+        layout="@layout/common_margin_line"/>
+    
+    <TextView
+        android:id="@+id/tv_satisfied_ask_answer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:maxLines="2"
+        android:textColor="@color/first_text_color" />
+
+    <TextView
+        android:id="@+id/tv_satisfied_ask_lookinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/third_text_color"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/btn_satisfied_ask_look"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/selector_blue_btn"
+        android:textColor="@color/white" />
+
+</LinearLayout>

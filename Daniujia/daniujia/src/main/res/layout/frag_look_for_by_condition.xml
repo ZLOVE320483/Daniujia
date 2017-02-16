@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#fafafa"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="12dp">
+
+        <ImageView
+            android:id="@+id/look_for_condition_iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingRight="14dp"
+            android:paddingLeft="12dp"
+            android:src="@drawable/ic_back_grey"/>
+
+        <RelativeLayout
+            android:id="@+id/search_container"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/expert_search_bg">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/search" />
+
+            <TextView
+                android:id="@+id/condition_tv_search"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@null"
+                android:layout_marginRight="50dp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="28dp"
+                android:layout_centerVertical="true"
+                android:text="@string/search_expert_position"
+                android:singleLine="true"
+                android:textColor="@color/third_text_color"
+                android:textSize="12sp"/>
+
+            <ImageView
+                android:id="@+id/speech_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:padding="8dp"
+                android:src="@drawable/voice_grey"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include layout="@layout/common_line"/>
+
+    <com.xiaojia.daniujia.ui.views.ConditionTabView
+        android:id="@+id/tab_condition"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        ></com.xiaojia.daniujia.ui.views.ConditionTabView>
+
+    <View
+        android:id="@+id/common_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:background="@color/common_line_color"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.xiaojia.daniujia.ui.views.XListView
+            android:id="@+id/condition_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@color/transparent"
+            android:divider="@color/transparent"
+            android:dividerHeight="@dimen/list_divider"
+            android:headerDividersEnabled="true"
+            android:footerDividersEnabled="true"
+            android:listSelector="@android:color/transparent"
+            android:visibility="visible"/>
+
+        <View
+            android:id="@+id/condition_view_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:background="#80000000"
+            android:visibility="gone"/>
+
+        <com.xiaojia.daniujia.ui.views.ConditionSelectView
+            android:id="@+id/look_for_condition_select_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+        </com.xiaojia.daniujia.ui.views.ConditionSelectView>
+
+        <ImageView
+            android:id="@+id/share_wechat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/white_share_wechat"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="12dp"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>
